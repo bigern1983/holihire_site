@@ -6,7 +6,32 @@ body {
     /* padding-top: 2.5rem; */
     /* background: #90b1e4; */
     color: white;
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+    /* text-shadow: 3px 3px 4px rgba(0,0,0,0.5); */
+}
+
+
+/* .row {
+    margin: none;
+}
+
+.container-fluid {
+    padding: none;
+} */
+
+#mainHeading {
+    height: 100vh;
+    min-height: 300px;
+    font-size: 2rem;
+    text-align: center;
+    background-image: url("../imgs/rocky-coast-2903524_1920.jpg");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+@media (max-width: 768px) {
+    #mainHeading {
+        font-size: 1.2rem;
+    }
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -17,61 +42,27 @@ body {
   margin-bottom: 4rem;
 } */
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
 
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 75vh;
-  /* background-color: #777; */
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 75vh;
-}
 
-.carousel h1 {
-    /* color: orange; */
-    font-family: 'Sunshiney';
-
-    font-size: 10rem;
-    font-weight: 500;
-
-}
-
-.carousel {
-    font-size: 1.4rem;
-}
 
 @media (min-width: 992px){
     .categories .col-lg-4:first-child {
-        border-right: 1px solid #77BFE2;
+        border-right: 1px solid white;
     }
     .categories .col-lg-4:last-child {
-        border-left: 1px solid #77BFE2;
+        border-left: 1px solid white;
     }
 }
 
 @media (max-width: 992px){
     .categories .col-lg-4:first-child {
-        border-bottom: 1px solid #77BFE2;
+        border-bottom: 1px solid white;
     }
     .categories .col-lg-4:last-child {
-        border-top: 1px solid #77BFE2;
+        border-top: 1px solid ;
     }
 }
 
-
-@media (max-width: 576px) {
-    .carousel h1 {
-        font-size: 5rem;
-    }
-}
 
 .navbar {
     background: rgb(0,0,0,0);
@@ -81,12 +72,13 @@ body {
 
 @media (max-width: 992px) {
     .navbar {
-        background: #77BFE2;
+    background-image: linear-gradient(to left,#77bfe2, #36a1d4);
     }
 }
 
 .navbar.scrolled {
-    background: #77BFE2;
+    /* background: #77BFE2; */
+    background-image: linear-gradient(to left, #77bfe2, #36a1d4);
     /* border-bottom: 2px solid #fce786; */
     transition: background 500ms;
 }
@@ -126,36 +118,25 @@ body {
 
 .btn-primary {
     background-color: #e67235;
-    border: none;
+    /* border-radius: 0; */
+    border: 2px solid white;
 }
 
 .btn-primary:hover {
     background-color: #c0561d;
+    border-color: white;
 }
 
-.yb-t {
-    border-top: 1px solid #fce786;
-}
-
-.yb-b {
-    border-bottom: 1px solid #fce786;
-}
 
 .categories {
-    background-color: #36a1d4;
+    /* background-color: #36a1d4; */
     text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
+     background-image: linear-gradient(270deg, #77BFE2, #36a1d4);
     
 }
 
-#mobility {
-    background-image: url("../imgs/wheelchair.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-}
 
 .categories .col-lg-4:hover {
-    background-color: #77BFE2;
     font-size: 1.2rem;
     line-height: 1.4rem;
     transition: background-color 1000ms;
@@ -163,16 +144,29 @@ body {
 }
 
 
+#mobility {
+    background-image: 
+        url("../imgs/wheelchair.svg"),
+        linear-gradient(270deg, #77BFE2, #36a1d4);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
 
 #baby {
-    background-image: url("../imgs/baby_bottle.svg");
+    background-image: 
+        url("../imgs/baby_bottle.svg"),
+        linear-gradient(90deg, #77BFE2, #36a1d4);
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
 }
 
 #general {
-    background-image: url("../imgs/tv.svg");
+    background-image: 
+        url("../imgs/tv.svg"),
+        linear-gradient(270deg, #77BFE2, #36a1d4);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -188,7 +182,8 @@ ul {
 
 .delivery {
     
-    background-color: #e67235;
+    /* background-color: #e67235;  */
+    background-image: linear-gradient(to right, #e67235, rgb(243, 158, 0));
     color: white;
 }
 
@@ -196,11 +191,15 @@ ul {
 
 .mission {
     text-shadow: none;
+    font-size: 1.3rem;
+    text-align: justify;
+    
 }
 
 .mission h2 {
     color: #c0561d;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    /* font-family: 'Sunshiney'; */
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
 }
 
 
@@ -225,3 +224,7 @@ footer h4 {
     border-bottom: 1px solid rgb(200, 200, 200);
     margin-bottom: 1em;
 }
+
+
+
+
