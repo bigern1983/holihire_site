@@ -1,3 +1,11 @@
+
+.color-primary-0 { color: #36A0D4 }	/* Main Primary color */
+.color-primary-1 { color: #87CAEB }
+.color-primary-2 { color: #5AB3DF }
+.color-primary-3 { color: #138DC8 }
+.color-primary-4 { color: #066C9E }
+
+
 html {
     height: 100%;
 }
@@ -6,6 +14,7 @@ body {
     /* padding-top: 2.5rem; */
     /* background: #90b1e4; */
     color: white;
+    line-height: 150%;
     /* text-shadow: 3px 3px 4px rgba(0,0,0,0.5); */
 }
 
@@ -22,10 +31,28 @@ body {
     height: 100vh;
     min-height: 300px;
     font-size: 2rem;
+    font-weight: 200;
     text-align: center;
-    background-image: url("../imgs/rocky-coast-2903524_1920.jpg");
+    background-image: url("../imgs/platform-3857885_1920.jpg");
     background-size: cover;
     background-position: center bottom;
+    position: relative;
+}
+
+#mainHeading img {
+    z-index: 10;
+}
+
+#mainHeading p {
+    z-index: 10;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
 }
 
 @media (max-width: 768px) {
@@ -34,34 +61,8 @@ body {
     }
 }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-/* .carousel {
-  margin-bottom: 4rem;
-} */
-/* Since positioning the image, we need to help out the caption */
 
 
-
-@media (min-width: 992px){
-    .categories .col-lg-4:first-child {
-        border-right: 1px solid white;
-    }
-    .categories .col-lg-4:last-child {
-        border-left: 1px solid white;
-    }
-}
-
-@media (max-width: 992px){
-    .categories .col-lg-4:first-child {
-        border-bottom: 1px solid white;
-    }
-    .categories .col-lg-4:last-child {
-        border-top: 1px solid ;
-    }
-}
 
 
 .navbar {
@@ -130,33 +131,72 @@ body {
 
 .categories {
     /* background-color: #36a1d4; */
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.5);
-     background-image: linear-gradient(270deg, #77BFE2, #36a1d4);
+    /* text-shadow: 3px 3px 4px rgba(0,0,0,0.5); */
+    /* background-image: linear-gradient(270deg, #77BFE2, #36a1d4); */
+    /* background-color: #36A0D4; */
+    line-height: 170%;
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: rgb(63, 63, 63);
     
 }
 
+.categories span {
+    text-align: center;
+    font-size: 6rem;
+    display: table;
+    margin: 0.2em auto;
+    color: #36A0D4;
+    /* float: right; */
+}
 
-.categories .col-lg-4:hover {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    transition: background-color 1000ms;
-    /* transition: font-size 1000ms; */
+.categories h2 {
+    color: #36A0D4;
+    font-weight: 200;
+    text-align: center;
+}
+
+.categories .btn {
+    display: table;
+    margin: 0 auto;
+}
+
+.categories i {
+    color: #36A0D4;
 }
 
 
+@media (min-width: 992px){
+    .categories .col-lg-4:first-child {
+        border-right: 1px solid #87CAEB;
+    }
+    .categories .col-lg-4:last-child {
+        border-left: 1px solid #87CAEB;
+    }
+}
+
+@media (max-width: 992px){
+    .categories .col-lg-4:first-child {
+        border-bottom: 1px solid #87CAEB;
+    }
+    .categories .col-lg-4:last-child {
+        border-top: 1px solid #87CAEB;
+    }
+}
+
 #mobility {
-    background-image: 
+    /* background-image: 
         url("../imgs/wheelchair.svg"),
-        linear-gradient(270deg, #77BFE2, #36a1d4);
+        linear-gradient(270deg, #77BFE2, #36a1d4); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
 }
 
 #baby {
-    background-image: 
+    /* background-image: 
         url("../imgs/baby_bottle.svg"),
-        linear-gradient(90deg, #77BFE2, #36a1d4);
+        linear-gradient(90deg, #77BFE2, #36a1d4); */
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -164,17 +204,15 @@ body {
 }
 
 #general {
-    background-image: 
+    /* background-image: 
         url("../imgs/tv.svg"),
-        linear-gradient(270deg, #77BFE2, #36a1d4);
+        linear-gradient(270deg, #77BFE2, #36a1d4); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
 }
 
-.categories h2 {
-    color: white;
-}
+
 
 ul {
     list-style-type: none;
@@ -191,26 +229,31 @@ ul {
 
 .mission {
     text-shadow: none;
-    font-size: 1.3rem;
+    font-size: 1.rem;
     text-align: justify;
     
 }
 
 .mission h2 {
     color: #c0561d;
+    font-weight: 200;
     /* font-family: 'Sunshiney'; */
     /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
 }
 
+.mission i {
+    color: #36A0D4;
+}
+
+#about {
+    background-image: url("../imgs/beach-4397579_1920.jpg");
+    background-size: cover;
+}
 
 
-/* .delivery i {
-    color: green;
-
-} */
 
 body {
-    font-family: 'Baloo Bhaina 2';
+    font-family: 'Poppins';
 }
 
 footer { 
