@@ -31,7 +31,7 @@ body {
     height: 100vh;
     min-height: 300px;
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 300;
     text-align: center;
     background-image: url("../imgs/platform-3857885_1920.jpg");
     background-size: cover;
@@ -141,12 +141,12 @@ body {
     
 }
 
-.categories span {
-    text-align: center;
+.categories .large-icon{
+    
     font-size: 6rem;
-    display: table;
-    margin: 0.2em auto;
-    color: #36A0D4;
+    /* margin: 0.2em auto; */
+    /* color: #36A0D4; */
+    margin-bottom: 0.2em;
     /* float: right; */
 }
 
@@ -164,6 +164,8 @@ body {
 .categories i {
     color: #36A0D4;
 }
+
+
 
 
 @media (min-width: 992px){
@@ -237,6 +239,7 @@ ul {
 .mission h2 {
     color: #c0561d;
     font-weight: 200;
+    border-bottom: 1px solid #36A0D4;
     /* font-family: 'Sunshiney'; */
     /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
 }
