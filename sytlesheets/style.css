@@ -15,6 +15,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    visibility: hidden;
     min-height: 100%;
     /* padding-top: 2.5rem; */
     /* background: #90b1e4; */
@@ -75,7 +76,17 @@ body {
     position: absolute;
     bottom: 0.1em;
     color: white;
+    /* animation: pulse 2s infinite; */
 }
+
+@keyframes pulse {
+    0% {font-size: 5rem;}
+    50% {font-size: 5.5rem;}
+    100% {font-size: 5rem;}
+}
+
+
+
 
 
 
@@ -198,31 +209,15 @@ body {
 }
 
 #mobility {
-    /* background-image: 
-        url("../imgs/wheelchair.svg"),
-        linear-gradient(270deg, #77BFE2, #36a1d4); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+    visibility: hidden;
 }
 
 #baby {
-    /* background-image: 
-        url("../imgs/baby_bottle.svg"),
-        linear-gradient(90deg, #77BFE2, #36a1d4); */
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+    visibility: hidden;
 }
 
 #general {
-    /* background-image: 
-        url("../imgs/tv.svg"),
-        linear-gradient(270deg, #77BFE2, #36a1d4); */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+ visibility: hidden;
 }
 
 
@@ -281,6 +276,10 @@ h2.display-3 {
     background-size: cover;
 }
 
+#about-text {
+    visibility: hidden;
+}
+
 .delivery i {
     color: #36A0D4;
 }
@@ -334,4 +333,20 @@ span.price {
 /* .table thead th, .table tbody th {
     font-weight: 200;
 } */
+
+
+/* animate delivery van when in view */
+
+/* #delivery_icon.hidden {
+    position: relative;
+    left: -50vw;
+}
+
+#delivery_icon.show {
+    left: 0px;
+    transition: left 1s ease-out;
+} */
+
+/* animate the down arrow to bring attention to it */
+
 
