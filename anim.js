@@ -2,9 +2,6 @@ var controller = new ScrollMagic.Controller();
 
 function init() {
 
-    gsap.to("body", {
-        autoAlpha: 1, duration: 2});
-
     var tl = gsap.timeline();
 
 
@@ -13,7 +10,7 @@ function init() {
         duration: 0.4,
         //scale: 0.4,
         x: gsap.utils.random(-100, 100),
-        y: gsap.utils.random(-100,100),
+        //y: gsap.utils.random(-100,100),
         ease: "power",
         autoAlpha: 0
     });
@@ -34,10 +31,10 @@ function init() {
     var t2 = gsap.timeline();
 
     t2.from("#about-text", {
-        y: gsap.utils.random(-100, 100),
+        //y: gsap.utils.random(-100, 100),
         x: gsap.utils.random(-100, 100),
         autoAlpha: 0,
-        duration: 0.2
+        duration: 1
     })
 
     console.log(document.querySelector("#mainHeading").getBoundingClientRect().height)
@@ -76,16 +73,16 @@ function init() {
     var t3 = gsap.timeline();
 
     t3.from("#delivery", {
-        y: gsap.utils.random(-100, 100),
-        x: gsap.utils.random(-100, 100),
+        //y: gsap.utils.random(-100, 100),
+        x: gsap.utils.random(-100, 0),
         autoAlpha: 0,
-        duration: 0.2
+        duration: 1
     })
 
 
     var scene3 = new ScrollMagic.Scene({
         triggerElement: "#delivery",
-        triggerHook: 0.9,
+        triggerHook: 0.7,
         reverse: true
     })
         .addIndicators({
