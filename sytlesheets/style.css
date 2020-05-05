@@ -17,6 +17,7 @@ html {
 body {
     visibility: hidden;
     min-height: 100%;
+     overflow-x: hidden; 
     /* padding-top: 2.5rem; */
     /* background: #90b1e4; */
     /* color: white; */

@@ -8,7 +8,7 @@ function init() {
 
 
     tl.from("#mobility", {
-        duration: 1,
+        duration: 0.4,
         scale: 0.4,
         x: gsap.utils.random(-50, 50),
         y: gsap.utils.random(-200, 200),
@@ -16,14 +16,14 @@ function init() {
         autoAlpha: 0
     });
     tl.from("#baby", {
-        duration: 1,
+        duration: 0.4,
         scale: 0.4,
         x: gsap.utils.random(-50, 50),
         y: gsap.utils.random(-200, 200),
         autoAlpha: 0
     });
     tl.from("#general", {
-        duration: 1,
+        duration: 0.4,
         scale: 0.4,
         y: gsap.utils.random(-200, 200),
         autoAlpha: 0
@@ -53,6 +53,7 @@ function init() {
         .setTween(tl)
         .addTo(controller);
     
+    
 
     var scene2 = new ScrollMagic.Scene({
         triggerElement: "#about-text h2",
@@ -74,9 +75,9 @@ function init() {
 
     t3.from("#delivery", {
         y: 100,
-        x: -100,
-        scale: 0.2,
-        autoAlpha: 0,
+        x: -document.body.getBoundingClientRect().width,
+        scale: 0.9,
+        //autoAlpha: 0,
         duration: 1
     })
 
@@ -95,7 +96,13 @@ function init() {
         .setTween(t3)
         .addTo(controller);
 
-
+    gsap.from(".down", {
+        scale: 0.7,
+        duration: 1, 
+        repeat: -1,
+        yoyo: true
+    })
+    
 }
 
 
