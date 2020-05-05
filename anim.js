@@ -10,7 +10,7 @@ function init() {
     tl.from("#mobility", {
         duration: 1,
         scale: 0.4,
-        x: gsap.utils.random(-1000, 1000),
+        x: gsap.utils.random(-50, 50),
         y: gsap.utils.random(-200, 200),
         ease: "power",
         autoAlpha: 0
@@ -18,7 +18,7 @@ function init() {
     tl.from("#baby", {
         duration: 1,
         scale: 0.4,
-        x: gsap.utils.random(-1000, 1000),
+        x: gsap.utils.random(-50, 50),
         y: gsap.utils.random(-200, 200),
         autoAlpha: 0
     });
@@ -33,7 +33,7 @@ function init() {
 
     t2.from("#about-text", {
         y: 100,
-        x: document.body.getBoundingClientRect().width / 2.0,
+        x: -100,
         autoAlpha: 0,
         duration: 1
     })
@@ -49,7 +49,6 @@ function init() {
             colorTrigger: "red",
             colorStart: "blue",
             colorEnd: "blue",
-            
         })
         .setTween(tl)
         .addTo(controller);
@@ -75,9 +74,10 @@ function init() {
 
     t3.from("#delivery", {
         y: 100,
-        x: -document.body.getBoundingClientRect().width / 2.0,
+        x: -100,
+        scale: 0.2,
         autoAlpha: 0,
-        duration: 1,
+        duration: 1
     })
 
 
