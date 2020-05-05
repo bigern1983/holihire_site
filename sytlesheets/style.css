@@ -297,6 +297,10 @@ h2.display-3 {
     color: #36A0D4;
 }
 
+#delivery {
+    visibility: hidden;
+}
+
 
 
 
