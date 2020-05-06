@@ -41,13 +41,6 @@ footer {
     position: relative;
     background-color: #232324;
 }
-/* .row {
-    margin: none;
-}
-
-.container-fluid {
-    padding: none;
-} */
 
 #mainHeading {
     height: 100vh;
@@ -90,16 +83,7 @@ footer {
     position: absolute;
     bottom: 0.1em;
     color: white;
-    /* animation: pulse 2s infinite; */
 }
-
-@keyframes pulse {
-    0% {font-size: 5rem;}
-    50% {font-size: 5.5rem;}
-    100% {font-size: 5rem;}
-}
-
-
 
 
 
@@ -110,14 +94,11 @@ footer {
     /* text-shadow: none; */
 }
 
-
 @media (max-width: 992px) {
     .navbar {
     background-image: linear-gradient(to left,#77bfe2, #36a1d4);
     }
 }
-
-
 
 .navbar.scrolled {
     /* background: #77BFE2; */
@@ -125,8 +106,6 @@ footer {
     /* border-bottom: 2px solid #fce786; */
     /* transition: background 1000ms; */
 }
-
-
 
 #mainNavbar {
     font-size: 1.5rem;
@@ -165,10 +144,6 @@ footer {
 
 
 .categories {
-    /* background-color: #36a1d4; */
-    /* text-shadow: 3px 3px 4px rgba(0,0,0,0.5); */
-    /* background-image: linear-gradient(270deg, #77BFE2, #36a1d4); */
-    /* background-color: #36A0D4; */
     line-height: 170%;
     font-size: 1.1rem;
     font-weight: 200;
@@ -179,8 +154,6 @@ footer {
 .large-icon{
     
     font-size: 6rem;
-    /* margin: 0.2em auto; */
-    /* color: #36A0D4; */
     margin-bottom: 0.2em;
     /* float: right; */
 }
@@ -222,7 +195,7 @@ footer {
     }
 }
 
-/* #mobility {
+#mobility { 
     visibility: hidden;
 }
 
@@ -233,11 +206,10 @@ footer {
 #general {
  visibility: hidden;
 }
- */
 
 
 ul {
-    list-style-type: none;
+    list-style: none;
 }
 
 .mission {
@@ -259,12 +231,6 @@ h2.display-3 {
     border-bottom: 1px solid #36A0D4;
     font-size: 4.5rem;
 }
-/* 
-@media (max-width: 320px){
-    h2.display-3 {
-        font-size: 10vw;
-    }
-} */
 
 @media (min-width: 321px) and (max-width: 768px) {
     h2.display-3 {
@@ -279,9 +245,7 @@ h2.display-3 {
 }
 
 
-#categories {
-    visibility: hidden;
-}
+
 
 
 .mission i {
@@ -350,24 +314,4 @@ span.price {
 .table thead tr {
     border: none;
 }
-
-/* .table thead th, .table tbody th {
-    font-weight: 200;
-} */
-
-
-/* animate delivery van when in view */
-
-/* #delivery_icon.hidden {
-    position: relative;
-    left: -50vw;
-}
-
-#delivery_icon.show {
-    left: 0px;
-    transition: left 1s ease-out;
-} */
-
-/* animate the down arrow to bring attention to it */
-
 

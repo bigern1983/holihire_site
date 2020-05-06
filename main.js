@@ -1,7 +1,7 @@
 function revealpage() {
     console.log("loaded page");
     gsap.to("body", {
-        autoAlpha: 1, duration: 2
+        autoAlpha: 1, duration: 0.5
     });
 
 

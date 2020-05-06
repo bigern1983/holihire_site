@@ -2,85 +2,112 @@ var controller = new ScrollMagic.Controller();
 
 function init() {
 
-    var tl = gsap.timeline();
-
-
-    tl.from("#categories", {
-        // delay: 0.1,
-        duration: 0.4,
-        //scale: 0.4,
+    // Animate the mobility card
+    var mobilityTimeline = gsap.timeline();
+    mobilityTimeline.from("#mobility", {
         x: gsap.utils.random(-100, 100),
-        //y: gsap.utils.random(-100,100),
+        duration: 0.4,
         ease: "power",
         autoAlpha: 0
     });
-    // tl.from("#baby", {
-    //     duration: 0.4,
-    //     scale: 0.4,
-    //     // x: gsap.utils.random(-50, 50),
-    //     y: gsap.utils.random(-50, 50),
-    //     autoAlpha: 0
-    // });
-    // tl.from("#general", {
-    //     duration: 0.4,
-    //     scale: 0.4,
-    //     y: gsap.utils.random(-200, 200),
-    //     autoAlpha: 0
-    // });
 
-    var t2 = gsap.timeline();
+    var mobScene = new ScrollMagic.Scene({
+        triggerElement: "#mobility",
+        triggerHook: 0.7,
+        reverse: true
+    }).setTween(mobilityTimeline)
+    .addIndicators({
+        name: "mobility", 
+        colorTrigger: "red",
+        indent: 10
+    }).addTo(controller);
 
-    t2.from("#about-text", {
+
+    //animate the baby card
+    var babyTimeline = gsap.timeline();
+    babyTimeline.from("#baby", {
+        x: gsap.utils.random(-100, 100),
+        duration: 0.4,
+        ease: "power",
+        autoAlpha: 0
+    });
+
+    var babyScene = new ScrollMagic.Scene({
+        triggerElement: "#baby",
+        triggerHook: 0.7,
+        reverse: true
+    }).setTween(babyTimeline)
+        .addIndicators({
+            name: "baby",
+            colorTrigger: "green",
+            indent: 20
+        }).addTo(controller);
+
+    
+    //animate the general card
+    var generalTimeline = gsap.timeline();
+    generalTimeline.from("#general", {
+        x: gsap.utils.random(-100, 100),
+        duration: 0.4,
+        ease: "power",
+        autoAlpha: 0
+    });
+
+    var generalScene = new ScrollMagic.Scene({
+        triggerElement: "#general",
+        triggerHook: 0.7,
+        reverse: true
+    }).setTween(generalTimeline)
+        .addIndicators({
+            name: "general",
+            colorTrigger: "green",
+            indent: 30
+        }).addTo(controller);
+    
+    console.log(mobScene)
+  
+
+
+
+
+
+
+   
+
+    var aboutTimeline = gsap.timeline();
+
+    aboutTimeline.from("#about-text", {
         //y: gsap.utils.random(-100, 100),
         x: gsap.utils.random(-100, 100),
         autoAlpha: 0,
         duration: 1
-    })
+    });
 
-    console.log(document.querySelector("#mainHeading").getBoundingClientRect().height)
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#categories",
-        triggerHook: 0.8,
-        reverse: true
-    })
-        .addIndicators({
-            colorTrigger: "red",
-            colorStart: "blue",
-            colorEnd: "blue",
-        })
-        .setTween(tl)
-        .addTo(controller);
-    
-    
-
-    var scene2 = new ScrollMagic.Scene({
+        var aboutScene = new ScrollMagic.Scene({
         triggerElement: "#about-text h2",
         triggerHook: 0.8,
         reverse: true
     })
-        .addIndicators({
-            colorTrigger: "red",
-            colorStart: "blue",
-            colorEnd: "blue",
-            indent: 10
+    .addIndicators({
+        name: "about",
+        colorTrigger: "red",
+        indent: 40
+    })
+    .setTween(aboutTimeline)
+    .addTo(controller);
 
-        })
-        .setTween(t2)
-        .addTo(controller);
+    //animate the delivery card
+    var deliveryTimeline = gsap.timeline();
 
-    
-    var t3 = gsap.timeline();
-
-    t3.from("#delivery", {
-        //y: gsap.utils.random(-100, 100),
-        x: gsap.utils.random(-100, 0),
+    deliveryTimeline.from("#delivery", {
+        y: gsap.utils.random(-100, 100),
+        x: gsap.utils.random(-500, -300),
         autoAlpha: 0,
         duration: 1
     })
 
 
-    var scene3 = new ScrollMagic.Scene({
+    var deliveryScene = new ScrollMagic.Scene({
         triggerElement: "#delivery",
         triggerHook: 0.7,
         reverse: true
@@ -89,22 +116,26 @@ function init() {
             colorTrigger: "red",
             colorStart: "blue",
             colorEnd: "blue",
-            indent: 15
+            indent: 50
         })
-        .setTween(t3)
+        .setTween(deliveryTimeline)
         .addTo(controller);
 
-    gsap.from(".down", {
-        scale: 0.7,
-        duration: 1, 
-        repeat: -1,
-        yoyo: true
-    })
+        //animate the down arrow in the heading 
+        gsap.from(".down", {
+            scale: 0.7,
+            duration: 1, 
+            repeat: -1,
+            yoyo: true
+        })
 
-    //pin heading
-    var headerScene = new ScrollMagic.Scene({
-        triggerHook: 0,
-    }).setPin("#mainHeading", {pushFollowers: false}).addTo(controller);
+        //pin heading
+        var headerScene = new ScrollMagic.Scene({
+            triggerHook: 0,
+        })
+            .setPin("#mainHeading", { pushFollowers: false })
+            .addTo(controller);
+    
     
 }
 
