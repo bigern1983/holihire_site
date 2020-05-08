@@ -5,6 +5,9 @@
 .color-primary-3 { color: #138DC8 }
 .color-primary-4 { color: #066C9E }
 
+
+
+
 .container-fluid {
     overflow-x: hidden;
 }
@@ -21,6 +24,7 @@ html {
 body {
     visibility: hidden;
     min-height: 100%;
+    width: 100%;
     /* max-width: 100%; */
     /* overflow-x: hidden;  */
     /* padding-top: 2.5rem; */
@@ -34,6 +38,7 @@ body {
 
 main {
     position: relative;
+    
     background-color: white;
 }
 
@@ -44,6 +49,7 @@ footer {
 
 #mainHeading {
     height: 100vh;
+    width: 100%!important;
     min-height: 300px;
     font-size: 2rem;
     font-weight: 300;
@@ -63,7 +69,8 @@ footer {
     z-index: 10;
 }
 
-.overlay {
+/* overlay parent div with dark cover */
+.dark-overlay {
     width: 100%;
     height: 100%;
     background-color: black;
@@ -77,20 +84,21 @@ footer {
     }
 }
 
+
+/* down indicator in heading */
 #mainHeading .down{
     z-index: 11;
     font-size: 5rem;
     position: absolute;
-    bottom: 0.1em;
+    bottom: 0.2em;
     color: white;
 }
 
 
 
-
-
 .navbar {
     background: rgb(0,0,0,0);
+    width: 100%;
     /* text-shadow: none; */
 }
 
@@ -131,15 +139,45 @@ footer {
 
 /* button customisation */
 
-.btn-primary {
+
+.orange-button {
     background-color: #e67235;
-    /* border-radius: 0; */
-    border: 2px solid white;
+    border: none;
+    border-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px #bb5d2a;
+    position: relative;
+    outline: none;
+    padding: 5px 20px;
+    color: white;
+    letter-spacing: 0.02rem;
+    outline: none;
+    font-weight: 300;
+    
 }
 
-.btn-primary:hover {
-    background-color: #c0561d;
-    border-color: white;
+.orange-button:hover {
+    background-color: #e67235;
+    top: 3px;
+    box-shadow: 0 3px #bb5d2a;
+    text-decoration: none;
+    color: white;
+}
+
+.orange-button:active {
+    background-color: #bb5d2a;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    top: 6px;
+}
+
+.orange-button:focus {
+    outline: none;
+}
+
+.orange_button a:hover {
+    color: white;
 }
 
 
@@ -150,9 +188,12 @@ footer {
     color: rgb(63, 63, 63);
     
 }
+.categories i {
+    color: #36A0D4;
+}
 
-.large-icon{
-    
+
+.categories .large-icon{
     font-size: 6rem;
     margin-bottom: 0.2em;
     /* float: right; */
@@ -169,12 +210,6 @@ footer {
     display: table;
     margin: 0 auto;
 }
-
-.categories i {
-    color: #36A0D4;
-}
-
-
 
 
 @media (min-width: 992px){
@@ -195,6 +230,7 @@ footer {
     }
 }
 
+/* hidden for animation */
 #mobility { 
     visibility: hidden;
 }
@@ -204,7 +240,7 @@ footer {
 }
 
 #general {
- visibility: hidden;
+    visibility: hidden;
 }
 
 
@@ -218,6 +254,8 @@ ul {
     text-align: justify;
     
 }
+
+
 
 h1 {
     font-weight: 100;
@@ -280,6 +318,15 @@ body {
 footer { 
     font-weight: 200;
     color: rgb(200, 200, 200);
+}
+
+footer a {
+   color: rgb(200, 200, 200);
+}
+
+footer a:hover {
+     color: rgb(243, 240, 240);
+     text-decoration: none;
 }
 
 footer h4 {

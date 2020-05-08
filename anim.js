@@ -100,10 +100,9 @@ function init() {
     var deliveryTimeline = gsap.timeline();
 
     deliveryTimeline.from("#delivery", {
-        y: gsap.utils.random(-100, 100),
         x: gsap.utils.random(-500, -300),
         autoAlpha: 0,
-        duration: 1
+        duration: 0.5
     })
 
 
