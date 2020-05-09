@@ -78,10 +78,10 @@
     <main>
         <div class="container-fluid">
             <div id="categories" class="row justify-content-center categories py-5 px-2">
-                <div id="mobility" class="col-lg-4 py-5">
+                <div id="mobility" class="col-lg-4 py-2">
                     <!-- <img class="mb-2" src="./imgs/scooter1.jpeg" alt="" width="50%"> -->
                     <div class="row">
-                        <div class="col d-flex flex-column align-items-center">
+                        <div class="col block d-flex flex-column align-items-center">
                             <i class="large-icon fas fa-wheelchair"></i>
                             <h2>Mobility Hire</h2>
                             <ul class="px-0">
@@ -90,13 +90,13 @@
                                 <li><i class="mr-3 fas fa-check-circle"></i>Bathroom Aids</li>
                                 <li><i class="mr-3 fas fa-check-circle"></i>Walking Aids</li>
                             </ul>
-                            <a class="orange-button" href="mobility.html">More Info</a>
+                            <a class="neu-button" href="mobility.html">More Info</a>
                         </div>
                     </div>
                 </div>
-                <div id="baby" class="col-lg-4 py-5">
+                <div id="baby" class="col-lg-4 py-2">
                     <div class="row">
-                        <div class="col d-flex flex-column align-items-center">
+                        <div class="col block d-flex flex-column align-items-center">
                             <span><i class="large-icon fas fa-baby-carriage"></i></span>
                             <h2>Baby Equipment</h2>
                             <ul class="px-0">
@@ -106,13 +106,13 @@
                                 <li><i class="mr-3 fas fa-check-circle"></i>Cots, Travel Cots, Bedguards</li>
                                 <!-- <li><i class="mr-3 fas fa-check-circle"></i>Stair Gates</li> -->
                             </ul>
-                            <a class="orange-button" href="baby_hire.html">More Info</a>
+                            <a class="neu-button" href="baby_hire.html">More Info</a>
                         </div>
                     </div>
                 </div>
-                <div id="general" class="col-lg-4 py-5">
+                <div id="general" class="col-lg-4 py-2">
                     <div class="row">
-                        <div class="col d-flex flex-column align-items-center">
+                        <div class="col block d-flex flex-column align-items-center">
                             <span><i class="large-icon fas fa-bed"></i></span>
                             <h2>General Hire</h2>
                             <ul class="px-0">
@@ -121,36 +121,46 @@
                                 <li><i class="mr-3 fas fa-check-circle"></i>Cooking Equipment</li>
                                 <li><i class="mr-3 fas fa-check-circle"></i>TVs, Radios, DVD Players</li>
                             </ul>
-                            <button class="orange-button">More Info</button>
+                            <button class="neu-button">More Info</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="about-text" class="row mission py-5 px-2 px-lg-5 justify-content-around">
-                <div class="col-lg-7">
-                    <h2 class="display-3">About Us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, tenetur?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae temporibus porro
-                        tenetur
-                        vero quidem minus nemo, molestiae deleniti totam voluptatum nesciunt eos pariatur expedita
-                        laboriosam aliquam quis ea maiores neque consequuntur eum quisquam? Similique, facere.
-                        Blanditiis ut quidem obcaecati minus, mollitia id aliquid facere debitis odio quia placeat
-                        facilis, a quos veritatis ab rem nostrum architecto consequuntur dolorum voluptatum
-                        provident?
-                        Quos voluptas magnam expedita voluptatum debitis suscipit tempora neque, tenetur delectus
-                        cum
-                        beatae veniam cumque repudiandae animi architecto dolore incidunt ipsa quod rerum! Incidunt
-                        mollitia perferendis temporibus, expedita distinctio nihil.</p>
+            <div id="about-text" class="row mission mt-5 justify-content-around">
+                <div class="col px-0">
+                    <svg id="top-poly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                        preserveAspectRatio="none">
+                        <polygon fill="white" points="0 0, 0 100,100 0, 0 0" />
+                    </svg>
+                    <div class="p-4">
+                        <h2 class="display-3">About Us</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, tenetur?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae temporibus porro
+                            tenetur
+                            vero quidem minus nemo, molestiae deleniti totam voluptatum nesciunt eos pariatur expedita
+                            laboriosam aliquam quis ea maiores neque consequuntur eum quisquam? Similique, facere.
+                            Blanditiis ut quidem obcaecati minus, mollitia id aliquid facere debitis odio quia placeat
+                            facilis, a quos veritatis ab rem nostrum architecto consequuntur dolorum voluptatum
+                            provident?
+                            Quos voluptas magnam expedita voluptatum debitis suscipit tempora neque, tenetur delectus
+                            cum
+                            beatae veniam cumque repudiandae animi architecto dolore incidunt ipsa quod rerum! Incidunt
+                            mollitia perferendis temporibus, expedita distinctio nihil.</p>
+                    </div>
                 </div>
-                <div id="about" class="d-none d-lg-block col-lg-4 pb-3">
-                </div>
+                <!-- <div id="about" class="d-none d-lg-block col-lg-4 pb-3">
+                </div> -->
+                <svg id="bottom-poly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon fill="white" points="0,100 100,0 100,100" />
+                </svg>
             </div>
 
             <div id="delivery" class="delivery row text-dark py-5">
                 <div class="col">
-                    <div class="row">
-                        <div id="delivery_col" class="d-flex col flex-column align-items-center categories">
+                    <div class="row d-flex justify-content-center">
+                        <div id="delivery_col"
+                            class="col-lg-4 block d-flex col flex-column align-items-center categories">
                             <span><i id="delivery_icon" class="large-icon fas fa-shipping-fast hidden"></i></span>
                             <h2 class="display-3">Delivery</h2>
                             <p>We deliver direct to your accomodation</p>
@@ -162,7 +172,7 @@
                                 <li><i class="mr-3 fas fa-check-circle"></i>Paralimni</li>
                                 <li><i class="mr-3 fas fa-check-circle"></i>Eastern Cyprus.........</li>
                             </ul>
-                            <button class="orange-button">Book Now</button>
+                            <button class="neu-button">Book Now</button>
                         </div>
                     </div>
                 </div>

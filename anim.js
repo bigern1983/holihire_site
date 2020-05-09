@@ -76,11 +76,11 @@ function init() {
 
     var aboutTimeline = gsap.timeline();
 
-    aboutTimeline.from("#about-text", {
+    aboutTimeline.from("#about-text p", {
         //y: gsap.utils.random(-100, 100),
         x: gsap.utils.random(-100, 100),
         autoAlpha: 0,
-        duration: 1
+        duration: 0.5
     });
 
         var aboutScene = new ScrollMagic.Scene({

@@ -15,7 +15,8 @@ function navBarScrolled() {
 }
 
 
-window.addEventListener("load", (ev) => {
+window.addEventListener("load", function(ev) {
+    console.log("window loaded")
     revealpage();
     navBarScrolled();
 });
