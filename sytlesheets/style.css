@@ -27,11 +27,7 @@ body {
     /* gvisibility: hidden; */
     min-height: 100%;
     width: 100%;
-    /* max-width: 100%; */
-    /* overflow-x: hidden;  */
-    /* padding-top: 2.5rem; */
-    /* background: #90b1e4; */
-    /* color: white; */
+  
     color: var(--text-color);
     line-height: 150%;
     font-weight: 300;
@@ -144,8 +140,6 @@ footer {
     background-color: var(--highlight-color);
     border: none;
     border-radius: 1em;
-    /* box-shadow: 0.3em 0.3em 0.4em 0 rgba(0, 0, 0, 0.3),
-                -0.3em -0.3em 0.8em 0 rgba(255, 255, 255, 0.3); */
     outline: none;
     padding: 0.4em 1.5em;
     color: white;
@@ -166,112 +160,82 @@ footer {
 
 
 
-.orange-button {
-    background-color: var(--highlight-color);
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 6px #bb5d2a;
-    position: relative;
-    outline: none;
-    padding: 5px 20px;
-    color: white;
-    letter-spacing: 0.02rem;
-    outline: none;
-    font-weight: 300;
-    top: 0;
-    
-}
-
-.orange-button:hover {
-    background-color: var(--highlight-color);
-    top: 3px;
-    box-shadow: 0 3px var(--dark-highlight-color);
-    text-decoration: none;
-    color: white;
-    transition-property: top, box-shadow;
-    transition-duration: 200ms, 200ms;
-
-}
-
-
-
-.orange-button:active {
-    background-color: var(--dark-highlight-color);
-    outline: none;
-    border: none;
-    box-shadow: none;
-    top: 6px;
-    transform: rotate(360deg);
-    transition-property: top, box-shadow;
-    transition-duration: 200ms, 200ms;
-}
-
-.orange-button:focus {
-    outline: none;
-}
-
-.orange_button a:hover {
-    color: white;
-}
-
 .block {
     border-radius: 3em;
     /* border: 1px solid black; */
-    margin: 0 1em;
+    
     padding: 2em 1em;
     box-shadow: 0.4em 0.4em 0.9em  0 rgba(0, 0, 0, 0.2),
     0.5em 0.5em 1em 0 rgba(255, 255, 255, 0.55);
     background: linear-gradient(-45deg, rgba(0,0,0,0.1), rgba(255,255,255,0.1));
-    max-width: 20em;
-}
-
-.categories {
-    line-height: 170%;
-    font-size: 1.1rem;
-    font-weight: 200;
-    color: rgb(63, 63, 63);
     
 }
 
 
-.categories i {
+
+.card i {
     color: var(--main-color);
 }
 
+.card {
+    border: none;
+    border-radius: 3em;
+    padding: 2em 1em;
+    box-shadow: 0.4em 0.4em 0.9em  0 rgba(0, 0, 0, 0.2),
+    0.5em 0.5em 1em 0 rgba(255, 255, 255, 0.55);
+    background: linear-gradient(-45deg, rgba(0,0,0,0.1), rgba(255,255,255,0.1));
+    max-width:30em;
+    min-width:25em;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-.categories .large-icon{
+.card-body {
+    padding: 0.5rem;
+}
+
+.card-header {
+    background-color: inherit;
+    border: none;
+}
+.card-footer { 
+    background-color: inherit;
+    border: none;
+}
+.large-icon{
     font-size: 6rem;
     margin-bottom: 0.2em;
     /* float: right; */
 }
 
-.categories h2 {
-    color: var(--main-color);
-    font-weight: 200;
-    text-align: center;
-    border: none;
-}
+.card-title h2 {
+    color: var(--highlight-color);
+    font-weight: 100;
+    border-bottom: 1px solid var(--main-color); */
+    font-size: 3.5rem;
+    display: inline;
+} 
 
-.categories .btn {
+.card .btn {
     display: table;
     margin: 0 auto;
 }
 
 
 /* @media (min-width: 992px){
-    .categories .col-lg-4:first-child {
+    .card .col-lg-4:first-child {
         border-right: 1px solid var(--main-color);
     }
-    .categories .col-lg-4:last-child {
+    .card .col-lg-4:last-child {
         border-left: 1px solid var(--main-color);
     }
 }
 
 @media (max-width: 992px){
-    .categories .col-lg-4:first-child {
+    .card .col-lg-4:first-child {
         border-bottom: 1px solid var(--main-color);
     }
-    .categories .col-lg-4:last-child {
+    .card .col-lg-4:last-child {
         border-top: 1px solid var(--main-color);
     }
 } */
@@ -342,39 +306,43 @@ h2.display-3 {
     
 }
 
-#about-text {
+.main-color-background {
+    background-image: linear-gradient(var(--main-color), var(--light-main));
+    background-size: cover;
+}
+
+.highlight-color-background {
+    background-image: linear-gradient(var(--highlight-color), var(--dark-highlight-color));
+    background-size: cover;
+}
+
+.diagonal{
     /* visibility: hidden; */
     position: relative;
     /* background-image: url("../imgs/rocky-coast-2903524_1920.jpg"); */
-    background-image: linear-gradient(var(--main-color), var(--light-main));
-    background-size: cover;
+  
     color: white;
-    font-weight:
-    
 }
 
-#about-text #bottom-poly {
+.diagonal #bottom-poly {
     width: 100%;
     height: 10vh;
     position: absolute;
     bottom: 0;
 }
 
-#about-text #top-poly {
+.diagonal #top-poly {
     width: 100%;
     height: 10vh;
     position: absolute;
     top: 0;
 }
 
-#about-text .col {
+.diagonal .col {
     padding-bottom:12vh;
     padding-top:12vh;
 }
 
-.delivery i {
-    color: var(--main-color);
-}
 
 #delivery {
     visibility: hidden;
