@@ -128,12 +128,13 @@ function init() {
             yoyo: true
         })
 
-        //pin heading
-        var headerScene = new ScrollMagic.Scene({
-            triggerHook: 0,
-        })
-            .setPin("#mainHeading", { pushFollowers: false })
-            .addTo(controller);
+        // //pin heading
+        // var headerScene = new ScrollMagic.Scene({
+        //     triggerHook: 0,
+        //     duration: "100%"
+        // })
+        //     .setPin("#mainHeading", { pushFollowers: false})
+        // .addTo(controller);
     
     
 }
