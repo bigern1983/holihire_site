@@ -516,7 +516,7 @@ span.price {
 }
 
 .single-photo {
-    width: 75%;
+    width: 60%;
     border-radius: 0.2rem;
     border: .4rem solid var(--highlight-color);
     transform: rotate(-5deg) scale(1);
