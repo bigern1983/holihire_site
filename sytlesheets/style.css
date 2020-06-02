@@ -49,10 +49,10 @@ footer {
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,.4)),
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.3)),
                         url("../imgs/scooter-9-wide.jpg");
     background-size: cover;
-    background-position: 100%;
+    background-position: 50%;
     color: var(--background-color);
     position: relative;
     z-index: 0;
@@ -315,8 +315,7 @@ span.price {
 
 .composition {
     position: relative; 
-    height: 25rem;
-    margin: 2rem 2rem;
+    margin: 0 2rem 2rem 2rem;
 }
 
 
@@ -348,7 +347,7 @@ span.price {
     margin-bottom: 25%;
 }
 
-.composition__photo--p1::after {
+.composition::after {
     clear: both;
     display: table;
     content: "";
@@ -474,6 +473,44 @@ span.price {
     color: white;
 }
 
+.photo-composition {
+    position: relative;
+    margin: 2rem;
+    z-index: 0;
+}
+
+.photo-composition::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.photo-composition__photo {
+    width: 75%;
+    border-radius: 0.2rem;
+    border: .7rem solid var(--highlight-color);
+    z-index: 1;
+    transition: all .5s;
+}
+
+.photo-composition__photo:hover {
+    z-index: 2;
+    transform: scale(1.2);
+}
 
 
 
+.photo-composition__photo--p1 {
+    position: relative;
+    float: left;
+    transform: rotate(-7deg);
+    margin-bottom: 20%;
+}
+
+
+.photo-composition__photo--p2{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    transform: rotate(10deg);
+}
