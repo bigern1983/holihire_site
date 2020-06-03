@@ -291,9 +291,14 @@ footer ul {
     padding: 0;
 }
 
-span.price {
+.price {
     font-size: 2rem;
     color: var(--highlight-color);
+}
+
+.price--small {
+    font-size: 1rem;
+    
 }
 
 
@@ -521,8 +526,9 @@ span.price {
     border: .4rem solid var(--highlight-color);
     transform: rotate(-5deg) scale(1);
     transition: all .5s;
+    margin-bottom: 3rem;
 }
 
 .single-photo:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.25);
 }
