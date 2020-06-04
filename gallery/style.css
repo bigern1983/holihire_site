@@ -25,19 +25,20 @@
     transform: rotate(4deg);
 }
 
-.gallery__main .gallery__main-image {
+.gallery__main .gallery__image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-.gallery .gallery__images .gallery__item {
+/* .gallery .gallery__images .gallery__item {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: absolute;
     transition: all .5s;
     z-index: 1;
-}
+} */
 /* 
  .gallery .gallery__images .gallery__item:target {
 
@@ -86,11 +87,11 @@
 
 
 
-.gallery .gallery__images .gallery__item .gallery__image {
+/* .gallery .gallery__images .gallery__item .gallery__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 .gallery .gallery__thumbnails {
     width: 100%;
