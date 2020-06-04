@@ -83,13 +83,32 @@
     </div> -->
             <div class="row py-3">
                 <div class="col-md-6  px-3 order-1 order-md-2">
-                    <div class="photo-composition">
+                    <div id="mob-gallery" class="gallery">
+                        <div class="gallery__main">
+                            <img class="gallery__main-image" src="" alt="">
+                        </div>
+                        <ul class="gallery__thumbnails">
+                            <li class="gallery__thumbnail-item"><a href="#pic1" class="gallery__link"><img
+                                        src="imgs/scooter-1.jpg"
+                                        alt="" class="gallery__thumbnail-image"></a></li>
+                            <li class="gallery__thumbnail-item"><a href="#pic2" class="gallery__link"><img
+                                        src="imgs/scooter-10.jpg"
+                                        alt="" class="gallery__thumbnail-image"></a></li>
+                            <li class="gallery__thumbnail-item"><a href="#pic3" class="gallery__link"><img
+                                        src="imgs/shop-scooters-1.jpg" alt="" class="gallery__thumbnail-image"></a></li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <!-- <div class="photo-composition">
                         <img src="imgs/scooter-1.jpg" alt="photo"
                             class="photo-composition__photo photo-composition__photo--p1">
                         <img src="imgs/scooter-10.jpg" alt="photo"
                             class="photo-composition__photo photo-composition__photo--p2">
 
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-md-6  px-3 order-2 order-md-1">
                     <h2 class="display-3 mb-4">Mobility Scooters</h2>
@@ -259,6 +278,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="gallery.js"></script>
 </body>
 
 </html>
