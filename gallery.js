@@ -27,13 +27,7 @@ var configureGallery = function (el) {
     var popupCaption = document.querySelector(".popup__caption");
     console.log(popup);
 
-    var popupClose = document.querySelector(".popup__close");
-    console.log(popupClose);
-
-
-    popupClose.addEventListener("click", function (ev) {
-        popup.classList.toggle("popup--hidden");
-    });
+    
 
 
 
@@ -73,12 +67,8 @@ var configureGallery = function (el) {
             newImg.classList.add("popup__image");
             popupMain.appendChild(newImg);
             popup.classList.toggle("popup--hidden");
-          
         })
         main.appendChild(newImg);
-
-
-
     }
 
 
@@ -94,6 +84,15 @@ var configureGallery = function (el) {
     }
 
 
+var popupClose = document.querySelector(".popup__close");
+var popup = document.querySelector(".popup");
+console.log(popupClose);
+
+
+popupClose.addEventListener("click", function (ev) {
+    popup.classList.toggle("popup--hidden");
+    console.log("popup click")
+});
 
 
 
