@@ -22,6 +22,20 @@ var configureGallery = function (el) {
     var thumbs = el.querySelectorAll(".gallery__thumbnails .gallery__thumbnail-item");
     var main = el.querySelector(".gallery__main")
 
+    var popup = document.querySelector(".popup");
+    var popupMain = document.querySelector(".popup__main");
+    var popupCaption = document.querySelector(".popup__caption");
+    console.log(popup);
+
+    var popupClose = document.querySelector(".popup__close");
+    console.log(popupClose);
+
+
+    popupClose.addEventListener("click", function (ev) {
+        popup.classList.toggle("popup--hidden");
+    });
+
+
 
     for (var i = 0; i < thumbs.length; ++i) {
         console.log(i + "heljaljdflajdlfkj");
@@ -50,8 +64,24 @@ var configureGallery = function (el) {
 
             newImg.classList.add("hidden")
         }
+
+        newImg.addEventListener("click", function (ev) {
+            console.log("click", this);
+            popupMain.innerHTML = "";
+            var newImg = document.createElement("img");
+            newImg.src = this.src;
+            newImg.classList.add("popup__image");
+            popupMain.appendChild(newImg);
+            popup.classList.toggle("popup--hidden");
+          
+        })
         main.appendChild(newImg);
+
+
+
     }
+
+
 }
 
 
@@ -62,6 +92,9 @@ var configureGallery = function (el) {
         resizeAll();
         configureGallery(galleryList[i])
     }
+
+
+
 
 
 
