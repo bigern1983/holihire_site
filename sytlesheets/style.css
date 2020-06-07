@@ -712,14 +712,7 @@ footer ul {
     /* display: none; */
 }
 
-.booking__form {
 
-     /* background-image:    linear-gradient(to right, rgba(255, 255, 255, .8) 0%, rgba(255,255,255,.8) 50%, rgba(255, 255, 255, .6) 100%),
-                        url("../imgs/rocky-coast-2903524_1920.jpg");  */
-   
-    background-size: cover;  
-             
-}
 
 .carousel {
     width: 90%;
@@ -736,92 +729,4 @@ footer ul {
     padding: 2rem;
     width: 100%;
     height: 100%;
-}
-
-.booking__input {
-    font-family: inherit;
-    color: inherit;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: .1rem;
-    background-color: rgba(0,0,0, .1);
-    border: none;
-    border-bottom: 3px solid #36A0D4;
-    width: 90%;
-    display: block;
-    transition: all .3s;
-}
-
-.booking__input:focus {
-    outline: none;
-}
-
-.booking__input:valid { 
-    border-bottom: 3px solid green;
-}
-
-.booking__input:invalid {
-    border-bottom: 3px solid red;
-}
-
-.booking__label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-left: 1rem;
-    margin-top: .5rem;
-    display: block;
-    opacity: 1;
-    transition: all .3s;
-}
-
-.booking__input:placeholder-shown + .booking__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-3rem);
-}
-
-.booking__form input[type="date"] {
-    width: 15rem;
-}
-
-.booking__radio-input {
-    display: none;
-}
-
-.booking__radio-label {
-    position: relative;
-    padding-left: 4rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-
-.booking__radio-button {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: inline-block;
-    border: 0.3rem solid #e67235;
-    position: absolute;
-    top: -.3rem;
-    left: 1rem;
-
-}
-
-.booking__radio-button::after {
-    content: "";
-    width: 1rem;
-    height: 1rem;
-    display: block;
-    border-radius: 50%;
-    background-color: #e67235;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity .2s;
-}
-
-.booking__radio-input:checked + .booking__radio-label .booking__radio-button::after {
-    opacity: 1;
 }
