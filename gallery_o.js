@@ -36,6 +36,7 @@ function Gallery(el) {
     for (var i = 0; i < this.thumbs.length; ++i) {
         this.images.push(this.thumbs[i]);
         var newImg = document.createElement("img");
+        newImg.setAttribute("data-test", "test");
         newImg.src = this.thumbs[i].src;
         newImg.classList.add("gallery__image");
         newImg.addEventListener("click", (ev) => {
@@ -84,13 +85,13 @@ var resizeGallery = function (el) {
 }
 
 var resizeAll = function () {
+    console.log("called resize function");
     for (var i = 0; i < galleryList.length; ++i) {
+
         resizeGallery(galleryList[i]);
         galleryArray[i].resizeThumbs();
     }
 }
-
-
 
 //get all instances of gallery
 var galleryList = document.querySelectorAll(".gallery");
@@ -109,3 +110,4 @@ popupClose.addEventListener("click", (ev) => {
 
 resizeAll();
 window.onresize = resizeAll;
+window.onload = resizeAll;

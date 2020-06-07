@@ -1,15 +1,12 @@
-:root { 
+/* :root { 
     --main-color: #36A0D4;
     --light-main: #91d3f5;
     --highlight-color: #e67235;
     --dark-highlight-color: #eb6821;
     --light-highlight-color: #fc9d6a;
-    --fancy-color: #ee2560;
     --background-color: white;
-    --text-color: #343a40;
-
-    
-}
+    --text-color: #343a40; 
+} */
 
 
 
@@ -29,7 +26,7 @@ body {
     /* gvisibility: hidden; */
     min-height: 100%;
     width: 100%;
-    color: var(--text-color);
+    color: #343a40;
     line-height: 150%;
     font-weight: 300;
     background-color: white;
@@ -39,7 +36,7 @@ body {
 footer {
     position: relative;
     z-index: 1;
-    background-color: var(--text-color);
+    background-color: #343a40;
 }
 
 
@@ -54,7 +51,7 @@ footer {
                         url("../imgs/scooter-9-wide.jpg");
     background-size: cover;
     background-position: 50%;
-    color: var(--background-color);
+    color: white;
     position: relative;
     z-index: 0;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
@@ -75,7 +72,7 @@ footer {
     font-size: 5rem;
     position: absolute;
     bottom: 0.2em;
-    color: var(--background-color);
+    color: white;
 }
 
 
@@ -84,7 +81,7 @@ footer {
     background: rgb(0,0,0,0); 
     width: 100%;
     transition: background-color 500ms ease-in 50ms;
-    background-color: var(--main-color);
+    background-color: #36A0D4;
 }
 
 
@@ -95,21 +92,21 @@ footer {
 }
 
 #mainNavbar .nav-link {
-    color: var(--background-color);
+    color: white;
 }
 
 #mainNavbar .nav-link:hover {
-    color: var(--highlight-color);
+    color: #e67235;
 }
 
 #mainNavbar .navbar-brand {
-    color: var(--highlight-color);
+    color: #e67235;
     font-size: 1.5rem;
 }
 
 
 .neu-button {
-    background-color: var(--highlight-color);
+    background-color: #e67235;
     border: none;
     border-radius: 1em;
     outline: none;
@@ -132,13 +129,13 @@ footer {
 
 
 .neu-button--blue {
-    background-color: var(--main-color)
+    background-color: #36A0D4
 }
 
 
 
 .card i {
-    color: var(--main-color);
+    color: #36A0D4;
 }
 
 .card {
@@ -178,7 +175,7 @@ footer {
 }
 
 .card-title h2{
-    color: var(--highlight-color);
+    color: #e67235;
     font-weight: 100;
     font-size: 2rem;
     display: inline;
@@ -196,15 +193,17 @@ ul {
 
 
 h1 {
-    font-weight: 100;
-    font-size: 5rem;
-    color: var(--main-color);
+    font-weight: 300;
+    font-size: 4rem;
+    color: #e67235;
+    text-transform: uppercase;
+  
 }
 
 h2.display-3 {
-    color: var(--highlight-color);
+    color: #e67235;
     font-weight: 100;
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 1px solid #36A0D4;
     font-size: 3.5rem;
     display: inline-block;
 }
@@ -212,7 +211,7 @@ h2.display-3 {
 #about-text h2 {
 
     font-weight: 100;
-    border-bottom: 1px solid var(--highlight-color);
+    border-bottom: 1px solid #e67235;
     font-size: 4.5rem;
 
 }
@@ -233,7 +232,7 @@ h2.display-3 {
 
 
 .mission i {
-    color: var(--main-color);
+    color: #36A0D4;
 }
 
 #about {
@@ -243,14 +242,20 @@ h2.display-3 {
 }
 
 .main-color-background {
-    background-image: linear-gradient(to right bottom, var(--main-color), var(--light-main));
+    background-image: linear-gradient(to right bottom, #36A0D4, #91d3f5);
     background-size: cover;
 }
 
 .highlight-color-background {
-    background-image: linear-gradient(var(--highlight-color), var(--dark-highlight-color));
+    background-image: linear-gradient(to right bottom,#c0602c, #fa8c51);
     background-size: cover;
+
 }
+
+.clip-bottom { 
+     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
 
 
 /* 
@@ -281,7 +286,7 @@ footer a:hover {
 }
 
 footer h4 {
-    color: var(--highlight-color);
+    color: #e67235;
     padding-bottom: 0.7em;
     border-bottom: 1px solid rgb(200, 200, 200);
     margin-bottom: 1em;
@@ -295,7 +300,7 @@ footer ul {
 
 .price {
     font-size: 2rem;
-    color: var(--highlight-color);
+    color: #e67235;
 }
 
 .price--small {
@@ -390,7 +395,7 @@ footer ul {
     transform: scale(1.05) translateY(0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
     z-index: 11;
-    outline: 0.5rem solid var(--highlight-color);
+    outline: 0.5rem solid #e67235;
     outline-offset: 0.5rem; 
 }
 
@@ -422,7 +427,7 @@ footer ul {
 }
 
 .text-dark {
-    color: var(--text-color);
+    color: #343a40;
 }
 
 
@@ -435,7 +440,7 @@ footer ul {
     bottom: 2rem;
     right: 2rem;
     border-radius: 3rem;
-    background-color: var(--main-color);
+    background-color: #36A0D4;
     color: white;  
     box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.4);
     transition: all .3s;
@@ -498,9 +503,9 @@ footer ul {
 }
 
 .photo-composition__photo {
-    width: 75%;
+    width: 90%;
     border-radius: 0.2rem;
-    border: .4rem solid var(--highlight-color);
+    border: .4rem solid #e67235;
     z-index: 1;
     transition: all .5s;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -529,23 +534,25 @@ footer ul {
 }
 
 .single-photo {
-    width: 60%;
+    width: 70%;
     border-radius: 0.2rem;
-    border: .4rem solid var(--highlight-color);
-    transform: rotate(-5deg) scale(1);
+    border: .4rem solid #e67235;
+    transform: rotate(5deg) scale(1);
     transition: all .5s;
     margin-bottom: 3rem;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+    filter: brightness(90%);
 }
 
 .single-photo:hover {
-    transform: rotate(0deg) scale(1.25);
+    transform: rotate(0deg) scale(1.1);
 }
 
 .gallery { 
     margin: 0 auto;
     width: 90%;
-    /* border: .3rem solid var(--highlight-color); */
-    background-color: var(--text-color);
+    /* border: .3rem solid #e67235; */
+    background-color: #343a40;
     border-bottom-width: 2px;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(4deg);
@@ -583,9 +590,10 @@ footer ul {
     z-index: 1;
     object-fit: cover;
     transition: all .5s;
-    border: 0.3rem solid var(--light-main);
+    border: 0.3rem solid #91d3f5;
     border-radius: .4rem;
     opacity: 0;
+    filter: brightness(85%);
 }
 
 .gallery__image.visible {
@@ -630,7 +638,7 @@ footer ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: .2rem solid var(--highlight-color);
+    border: .2rem solid #e67235;
     position: relative;
     
 }
@@ -704,3 +712,116 @@ footer ul {
     /* display: none; */
 }
 
+.booking__form {
+
+     /* background-image:    linear-gradient(to right, rgba(255, 255, 255, .8) 0%, rgba(255,255,255,.8) 50%, rgba(255, 255, 255, .6) 100%),
+                        url("../imgs/rocky-coast-2903524_1920.jpg");  */
+   
+    background-size: cover;  
+             
+}
+
+.carousel {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.carousel-item {
+
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.booking__input {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: .1rem;
+    background-color: rgba(0,0,0, .1);
+    border: none;
+    border-bottom: 3px solid #36A0D4;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+}
+
+.booking__input:focus {
+    outline: none;
+}
+
+.booking__input:valid { 
+    border-bottom: 3px solid green;
+}
+
+.booking__input:invalid {
+    border-bottom: 3px solid red;
+}
+
+.booking__label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    display: block;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.booking__input:placeholder-shown + .booking__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-3rem);
+}
+
+.booking__form input[type="date"] {
+    width: 15rem;
+}
+
+.booking__radio-input {
+    display: none;
+}
+
+.booking__radio-label {
+    position: relative;
+    padding-left: 4rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.booking__radio-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0.3rem solid #e67235;
+    position: absolute;
+    top: -.3rem;
+    left: 1rem;
+
+}
+
+.booking__radio-button::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    border-radius: 50%;
+    background-color: #e67235;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.booking__radio-input:checked + .booking__radio-label .booking__radio-button::after {
+    opacity: 1;
+}
