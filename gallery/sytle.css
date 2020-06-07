@@ -1,9 +1,0 @@
-.gallery { 
-    width: 40rem;
-    height: 40rem;
-    background-color: orangered;
-}
-
-.gallery .gallery__images{
-    list-style: none;
-}
