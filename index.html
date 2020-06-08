@@ -8,14 +8,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" type="text/css">
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"
+        type="text/css">
 
     <script src="https://kit.fontawesome.com/b5db990aa2.js" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
-        rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet"
+        type="text/css">
 
     <link rel="stylesheet" href="sytlesheets/style.css">
+    <link rel="stylesheet" href="sytlesheets/card.css">
 
 
     <title>Holihire.com</title>
@@ -23,7 +25,7 @@
 
 <body>
     <header>
-        <div class="conatiner-fluid" style="width: 100vw;">
+        
             <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-lg py-0 fixed-top">
                 <a class="navbar-brand" href="index.html"><i class="fas fa-sun"></i> Holihire</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -58,82 +60,95 @@
                     </ul>
                 </div>
             </nav>
+       
+
+
+        <div id="mainHeading"
+            class=" skewed-section d-flex flex-column align-items-center justify-content-center mx-0 my-0">
+            <img class="d-block" src="imgs/banner.svg" width="66%" alt="">
+            <p>Number one for Mobility and Baby Equipment Hire in Eastern Cyprus</p>
+            <a class="down" href="#categories"><i class="fas fa-chevron-down"></i></a>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div id="mainHeading"
-                    class="col d-flex flex-column align-items-center justify-content-center mx-0 my-0">
-                    <img class="d-block" src="imgs/banner.svg" width="66%" alt="">
-                    <p>Number one for Mobility and Baby Equipment Hire in Eastern Cyprus</p>
-                    <a class="down" href="#categories"><i class="fas fa-chevron-down"></i></a>
-                </div>
-            </div>
-        </div>
+
+
 
     </header>
 
     <main>
         <div class="container-fluid">
 
-            <section id="categories" class="card-deck pt-5">
-                <div id="mobility" class="card text-center mx-auto">
-                    <div class="card-header">
-                        <i class="large-icon fas fa-wheelchair"></i>
+            <section id="categories" class="pt-5">
+
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-around my-5">
+                        <div id="mobility" class="card text-center">
+                            <div class="card-header card--1 clip-bottom">
+                                <h3 class="card__title">
+                                    mobility hire
+                                </h3>
+                            </div>
+                            <div class="card-body text-left">
+                                <ul>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Mobility Scooters</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Wheelchairs</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Bathroom Aids</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Walking Aids</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a class="neu-button" href="mobility.html">More Info</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-title">
-                        <h2>Mobility Hire</h2>
+                    <div class="col-lg-4 d-flex justify-content-around my-5">
+                        <div id="baby" class="card text-center">
+                            <div class="card-header clip-bottom card--2">
+                                <h3 class="card__title">
+                                    Baby Equipment
+                                </h3>
+                            </div>
+                            <div class="card-body text-left">
+                                <ul>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Car Seats</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Push Chairs</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>High Chairs</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Cots / Travel Cots</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Bedguards</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a class="neu-button" href="baby_hire.html">More Info</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body text-left mx-auto">
-                        <ul>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Mobility Scooters</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Wheelchairs</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Bathroom Aids</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Walking Aids</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a class="neu-button" href="mobility.html">More Info</a>
+                    <div class="col-lg-4 d-flex justify-content-around my-5">
+                        <div id="general" class="card text-center">
+                            <div class="card-header card--3 clip-bottom">
+                                <h3 class="card__title">
+                                    General Hire
+                                </h3>
+                            </div>
+
+                            <div class="card-body text-left">
+                                <ul>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>A/C Units</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Campbeds</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>Cooking Equipment</li>
+                                    <li><i class="mr-3 fas fa-check-circle"></i>TVs, Radios, DVD Players</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a class="neu-button" href="mobility.html">More Info</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="baby" class="card text-center mx-auto">
-                    <div class="card-header">
-                        <i class="large-icon fas fa-baby-carriage"></i>
-                    </div>
-                    <div class="card-title">
-                        <h2>Baby Equipment</h2>
-                    </div>
-                    <div class="card-body text-left mx-auto">
-                        <ul>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Car Seats</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Push Chairs</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>High Chairs</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Cots / Travel Cots</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Bedguards</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a class="neu-button" href="baby_hire.html">More Info</a>
-                    </div>
-                </div>
-                <div id="general" class="card text-center mx-auto">
-                    <div class="card-header">
-                        <i class="large-icon fas fa-tv"></i>
-                    </div>
-                    <div class="card-title">
-                        <h2>General Hire</h2>
-                    </div>
-                    <div class="card-body text-left mx-auto">
-                        <ul>
-                            <li><i class="mr-3 fas fa-check-circle"></i>A/C Units</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Campbeds</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>Cooking Equipment</li>
-                            <li><i class="mr-3 fas fa-check-circle"></i>TVs, Radios, DVD Players</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <a class="neu-button" href="mobility.html">More Info</a>
-                    </div>
-                </div>
+
+
+
+
+
+
             </section>
 
 
@@ -176,10 +191,10 @@
 
 
             <section id="delivery" class="card text-center mx-auto my-4">
-                <div class="card-header">
+                <!-- <div class="card-header">
                     <i class="large-icon fas fa-shipping-fast"></i>
-                </div>
-                <div class="card-title">
+                </div> -->
+                <div class="card-title mt-4">
                     <h2 class="display-3">Delivery</h2>
                 </div>
                 <div class="card-body">
@@ -202,10 +217,10 @@
 
         </div>
 
-        <a href="#" class="whatsapp-button">
+        <!-- <a href="#" class="whatsapp-button">
             <span class="whatsapp-button__icon fab fa-whatsapp"></span>
             <span class="whatsapp-button__caption">Whatsapp us!</span>
-        </a>
+        </a> -->
 
     </main>
 

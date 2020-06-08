@@ -1,12 +1,47 @@
-<form enctype="multipart/form-data" method="post" name="fileinfo">
-    <label>Your email address:</label>
-    <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32"
-        maxlength="64" /><br />
-    <label>Custom file label:</label>
-    <input type="text" name="filelabel" size="12" maxlength="32" /><br />
-
-    <input type="submit" value="Stash the file!" />
-</form>
-<div></div>
-
-<script src="form.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sytlesheets/rotating-card.css">
+    <script src="https://kit.fontawesome.com/b5db990aa2.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet"
+        type="text/css">
+    
+    <link rel="stylesheet" href="sytlesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rotating-rotating-card">
+        <div class="rotating-rotating-card__side rotating-card__side--front">
+            <div class="rotating-rotating-card__picture rotating-card__picture--1">
+                &nbsp;
+            </div>
+            <h4 class="rotating-rotating-card__heading">
+                <span class="rotating-rotating-card__heading-span rotating-card__heading-span--1">
+                    mobility hire
+                    </span>
+            </h4>
+            <div class="rotating-rotating-card__details">
+                <ul class="mx-auto">
+                    <li><i class="mr-3 fas fa-check-circle"></i>Mobility Scooters</li>
+                    <li><i class="mr-3 fas fa-check-circle"></i>Wheelchairs</li>
+                    <li><i class="mr-3 fas fa-check-circle"></i>Bathroom Aids</li>
+                    <li><i class="mr-3 fas fa-check-circle"></i>Walking Aids</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rotating-rotating-card__side rotating-card__side--back rotating-card__side--back-1">
+            <div class="rotating-rotating-card__cta">
+                <div class="rotating-rotating-card__price-box">
+                    <p class="rotating-rotating-card__price-only">Only</p>
+                    <p class="rotating-rotating-card__price-value">$297</p>
+                </div>
+                <a href="#popup" class="btn btn--white">Book Now!</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

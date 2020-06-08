@@ -23,19 +23,16 @@ html {
     }
 }
 body {
-    /* gvisibility: hidden; */
     min-height: 100%;
     width: 100%;
     color: #343a40;
     line-height: 150%;
     font-weight: 300;
-    background-color: white;
-    /* text-shadow: 3px 3px 4px rgba(0,0,0,0.5); */
+    background-color: #fafafa;
 }
 
 footer {
-    position: relative;
-    z-index: 1;
+   
     background-color: #343a40;
 }
 
@@ -43,7 +40,6 @@ footer {
 #mainHeading {
     height: 100vh;
     width: 100%!important;
-    min-height: 300px;
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
@@ -53,10 +49,9 @@ footer {
     background-position: 50%;
     color: white;
     position: relative;
-    z-index: 0;
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
     line-height: 2rem;
 }
+    
 
 @media (max-width: 768px) {
     #mainHeading {
@@ -80,7 +75,6 @@ footer {
 .navbar {
     background: rgb(0,0,0,0); 
     width: 100%;
-    transition: background-color 500ms ease-in 50ms;
     background-color: #36A0D4;
 }
 
@@ -88,7 +82,6 @@ footer {
 #mainNavbar {
     font-size: 1.5rem;
     font-weight: 300;
-    /* background-color: rgb(144, 218, 247); */
 }
 
 #mainNavbar .nav-link {
@@ -140,19 +133,22 @@ footer {
 
 .card {
     border: none;
-    border-radius: 3em;
-    padding: 2em 1em;
-    box-shadow: 0.4em 0.4em 0.9em  0 rgba(0, 0, 0, 0.2),
-    -0.5em -0.5em 1em 0 rgba(255, 255, 255, 0.55);
+    border-radius: .3rem;
+    padding: 0;
+    box-shadow: 0.4em 0.4em 0.9em  0 rgba(0, 0, 0, 0.2);
     background: linear-gradient(-45deg, rgba(0,0,0,0.1), rgba(255,255,255,0.1));
-    max-width:25em;
-    min-width:20em;
-    margin: 1rem 0;
+    max-width: 23rem;
+    width: 90%;
     transition: .5s;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    margin: 2rem;
 }
 
 .card:hover {
-    box-shadow: none;
+  
+    box-shadow: 0.8rem 0.8rem 1.8rem  0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
     
 }
 
@@ -161,9 +157,53 @@ footer {
 }
 
 .card-header {
-    background-color: inherit;
+    height: 15rem;
+    width: 100%;
     border: none;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2rem;
 }
+
+.card__title {
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: .5rem;
+    text-align: right;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+}
+
+.card--1 {
+    background-image: url("../imgs/scooter-11-blue.jpg");
+}
+
+.card--1 .card__title {
+    background-color: #36A0D4dd;
+}
+
+.card--2 {
+    background-image: url("../imgs/pram3-green.jpg")
+}
+
+.card--2 .card__title {
+    background-color: #40bf8add;
+}
+
+.card--3 {
+    background-image: url("../imgs/fan-1.jpg");
+}
+
+.card--3 .card__title {
+    background-color: #e67235dd;
+}
+
 .card-footer { 
     background-color: inherit;
     border: none;
@@ -171,7 +211,7 @@ footer {
 .large-icon{
     font-size: 4rem;
     margin-bottom: 0.2em;
-    /* float: right; */
+ 
 }
 
 .card-title h2{
@@ -189,6 +229,10 @@ footer {
 
 ul {
     list-style: none;
+}
+
+.card ul li {
+    margin-bottom: .5rem;
 }
 
 
@@ -253,7 +297,7 @@ h2.display-3 {
 }
 
 .clip-bottom { 
-     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 
@@ -413,7 +457,7 @@ footer ul {
 
 .skewed-section {
     transform: skewY(-3deg);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.35);
 }
 
 .skewed-section > * {
