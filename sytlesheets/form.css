@@ -1,4 +1,10 @@
-
+.booking__form {
+    margin: 5rem auto;
+    background-color: white;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: .3rem;
+}
 .booking__group {
     position: relative;
 
@@ -132,4 +138,21 @@
     color: red;
     float: right;
     margin-right: 10%;
+}
+
+.contact__form {
+    width: 30rem;
+    margin: 5rem auto;
+    background-color: white;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: .3rem;
+
+}
+
+@media (max-width: 32rem) {
+    .contact__form {
+        width: 20rem;
+    }
+    
 }
