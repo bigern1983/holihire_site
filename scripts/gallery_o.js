@@ -94,7 +94,7 @@ function Gallery(el) {
         // newImg.setAttribute("data-test", "test");
         newImg.src = this.thumbs[i].src;
         newImg.classList.add("gallery__image");
-        newImg.addEventListener("click", (ev) => {
+        newImg.addEventListener("click", function (ev) {
             console.log("click");
             this.popupMain.innerHTML = "";
             var popupImg = document.createElement("img");
@@ -102,7 +102,7 @@ function Gallery(el) {
             popupImg.classList.add("popup__image");
             this.popupMain.appendChild(popupImg);
             this.popup.classList.toggle("popup--hidden");
-        })
+        }.bind(this));
 
         this.main.appendChild(newImg);
     }
@@ -113,7 +113,7 @@ function Gallery(el) {
 
     // add event listeners to thumnails
     for (var i = 0; i < this.thumbs.length; ++i) {
-        this.thumbs[i].addEventListener("click", (ev) => {
+        this.thumbs[i].addEventListener("click", function(ev){
 
             var index = Array.prototype.indexOf.call(this.thumbs, ev.target);
             if (index != this.currentImageIndex) {
@@ -125,21 +125,21 @@ function Gallery(el) {
                 this.currentImageIndex = index;
                 this.checkEnd();
             }
-        });
+        }.bind(this));
         this.checkEnd();
     }
 
 
     //next button listenter
-    this.main.querySelector(".gallery__next").addEventListener("click", (ev) => {
+    this.main.querySelector(".gallery__next").addEventListener("click", function(ev){
         console.log("click")
         this.nextImage();
-    });
+    }.bind(this));
     //prev button listenter
-    this.main.querySelector(".gallery__prev").addEventListener("click", (ev) => {
+    this.main.querySelector(".gallery__prev").addEventListener("click", function (ev) {
         console.log("click")
         this.prevImage();
-    })
+    }.bind(this));
 }
 
 
@@ -175,9 +175,9 @@ for (var i = 0; i < galleryList.length; ++i) {
 //configure popup
 var popup = document.querySelector(".popup");
 var popupClose = document.querySelector(".popup__close");
-popupClose.addEventListener("click", (ev) => {
+popupClose.addEventListener("click", function(ev){
     popup.classList.toggle("popup--hidden");
-})
+}.bind(this));
 
 resizeAll();
 window.onresize = resizeAll;
