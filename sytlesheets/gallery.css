@@ -57,6 +57,26 @@
     opacity: 0;
 } */
 
+.gallery__next{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    z-index: 5;
+}
+
+.gallery__prev {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    z-index: 5;
+}
+
 .gallery__thumbnails {
     width: 95%;
     height: 18%;

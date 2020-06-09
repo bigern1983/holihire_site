@@ -6,8 +6,10 @@ function Gallery(el) {
     this.images = [];
     this.thumbLefts = new Array(this.thumbItems.length);
     this.currentImageIndex = 0;
-    this.popup = document.querySelector(".popup")
-    this.popupMain = document.querySelector(".popup__main")
+    this.popup = document.querySelector(".popup");
+    this.popupMain = document.querySelector(".popup__main");
+    this.nextArrow = this.main.querySelector(".gallery__next");
+    this.prevArrow = this.main.querySelector(".gallery__prev");
 
 
     this.nextImage = function () {
@@ -18,7 +20,7 @@ function Gallery(el) {
 
             this.currentImageIndex += 1;
             this.slideThumbs(this.currentImageIndex);
-
+            this.checkEnd();
         }
 
     };
@@ -31,40 +33,66 @@ function Gallery(el) {
 
             this.currentImageIndex -= 1;
             this.slideThumbs(this.currentImageIndex);
+            this.checkEnd();
 
         }
 
     };
 
+    this.checkEnd = function () {
+        if (this.currentImageIndex == 0) {
+            //remove prev arrow
+            this.prevArrow.style.opacity = 0;
+        } else {
+            //put it back
+            this.prevArrow.style.opacity = 1;
+            
+        }
+
+        if (this.currentImageIndex == this.mainImages.length - 1) {
+            //remove prev arrow
+            this.nextArrow.style.opacity = 0;
+        } else {
+            //put it back
+            this.nextArrow.style.opacity = 1;
+
+        }
+        
+    }
 
     this.resizeThumbs = function () {
         this.thumbsGalleryWidht = el.querySelector(".gallery__thumbnails").offsetWidth;
 
         for (var i = 0; i < this.thumbItems.length; ++i) {
             this.thumbLefts[i] = i * this.thumbsGalleryWidht / 5;
-            this.thumbItems[i].style["left"] = String(this.thumbLefts[i])+ "px";
+            this.thumbItems[i].style["left"] = String(this.thumbLefts[i]) + "px";
         }
     }
 
     //center on the clicked thumbnail
-    this.slideThumbs= function (n) {
+    this.slideThumbs = function (n) {
+        if ((n < 2) || (n > (this.mainImages.length - 2 -1))) {
+            return;
+        }
         this.thumbsGalleryWidht = el.querySelector(".gallery__thumbnails").offsetWidth;
         var thumbWidth = this.thumbsGalleryWidht / 5;
         for (var i = 0; i < this.thumbItems.length; ++i) {
-            
-            var offset = (i * this.thumbsGalleryWidht / 5) - n * thumbWidth + 2*thumbWidth;
+
+            var offset = (i * this.thumbsGalleryWidht / 5) - n * thumbWidth + 2 * thumbWidth;
             this.thumbItems[i].style.left = String(offset) + "px";
         }
     }
-   
-    
+
+
+
+
 
 
     //add all images to main panel
     for (var i = 0; i < this.thumbs.length; ++i) {
         this.images.push(this.thumbs[i]);
         var newImg = document.createElement("img");
-        newImg.setAttribute("data-test", "test");
+        // newImg.setAttribute("data-test", "test");
         newImg.src = this.thumbs[i].src;
         newImg.classList.add("gallery__image");
         newImg.addEventListener("click", (ev) => {
@@ -80,26 +108,42 @@ function Gallery(el) {
         this.main.appendChild(newImg);
     }
 
-    this.main.firstElementChild.classList.add("visible");
-    this.mainImages = this.main.children;
 
+    this.mainImages = this.main.querySelectorAll(".gallery__image");
+    this.mainImages[0].classList.add("visible")
 
+    // add event listeners to thumnails
     for (var i = 0; i < this.thumbs.length; ++i) {
-        console.log(this.thumbs[i]);
         this.thumbs[i].addEventListener("click", (ev) => {
-         
+
             var index = Array.prototype.indexOf.call(this.thumbs, ev.target);
             if (index != this.currentImageIndex) {
-                
+
                 //left or right of current image
                 this.slideThumbs(index);
                 this.mainImages[index].classList.add("visible");
                 this.mainImages[this.currentImageIndex].classList.remove("visible");
                 this.currentImageIndex = index;
+                this.checkEnd();
             }
         });
+        this.checkEnd();
     }
+
+
+    //next button listenter
+    this.main.querySelector(".gallery__next").addEventListener("click", (ev) => {
+        console.log("click")
+        this.nextImage();
+    });
+    //prev button listenter
+    this.main.querySelector(".gallery__prev").addEventListener("click", (ev) => {
+        console.log("click")
+        this.prevImage();
+    })
 }
+
+
 
 
 
