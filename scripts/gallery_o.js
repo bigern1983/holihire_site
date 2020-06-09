@@ -8,7 +8,35 @@ function Gallery(el) {
     this.currentImageIndex = 0;
     this.popup = document.querySelector(".popup")
     this.popupMain = document.querySelector(".popup__main")
-   
+
+
+    this.nextImage = function () {
+
+        if (this.currentImageIndex < this.mainImages.length - 1) {
+            this.mainImages[this.currentImageIndex + 1].classList.add("visible");
+            this.mainImages[this.currentImageIndex].classList.remove("visible");
+
+            this.currentImageIndex += 1;
+            this.slideThumbs(this.currentImageIndex);
+
+        }
+
+    };
+
+    this.prevImage = function () {
+
+        if (this.currentImageIndex > 0) {
+            this.mainImages[this.currentImageIndex - 1].classList.add("visible");
+            this.mainImages[this.currentImageIndex].classList.remove("visible");
+
+            this.currentImageIndex -= 1;
+            this.slideThumbs(this.currentImageIndex);
+
+        }
+
+    };
+
+
     this.resizeThumbs = function () {
         this.thumbsGalleryWidht = el.querySelector(".gallery__thumbnails").offsetWidth;
 

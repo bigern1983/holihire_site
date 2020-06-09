@@ -182,6 +182,12 @@ footer {
 
 }
 
+@media (max-width: 576px){
+    .card__title {
+        font-size: 2rem;
+    }
+}
+
 .card--1 {
     background-image: url("../imgs/scooter-11-blue.jpg");
 }
@@ -233,8 +239,21 @@ ul {
     list-style: none;
 }
 
-.card ul li {
+.card li {
     margin-bottom: .5rem;
+    padding-left: 2rem;
+
+
+}
+
+.card li::before {
+    margin-left: -2rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058";
+    color: #36A0D4;
+    width: 2rem;
+    display: inline-block;
 }
 
 
@@ -254,7 +273,7 @@ h2.display-3 {
     display: inline-block;
 }
 
-#about-text h2 {
+#about h2 {
 
     font-weight: 100;
     border-bottom: 1px solid #e67235;
@@ -281,11 +300,11 @@ h2.display-3 {
     color: #36A0D4;
 }
 
-#about {
+/* #about {
     background-image: url("../imgs/beach-4397579_1920.jpg");
     background-size: cover;
     
-}
+} */
 
 .main-color-background {
     background-image: linear-gradient(to right bottom, #36A0D4, #91d3f5);
