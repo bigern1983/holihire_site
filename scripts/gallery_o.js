@@ -11,7 +11,6 @@ function Gallery(el) {
     this.nextArrow = this.main.querySelector(".gallery__next");
     this.prevArrow = this.main.querySelector(".gallery__prev");
 
-
     this.nextImage = function () {
 
         if (this.currentImageIndex < this.mainImages.length - 1) {

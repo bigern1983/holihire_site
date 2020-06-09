@@ -28,6 +28,7 @@
     overflow: hidden;
     margin: 0;
     transform: rotate(4deg) translateY(-5%);
+
   
 }
 
@@ -65,6 +66,9 @@
     font-size: 2rem;
     color: white;
     z-index: 5;
+    opacity: 1;
+    transition: all .5s;
+    cursor: pointer;
 }
 
 .gallery__prev {
@@ -75,6 +79,9 @@
     font-size: 2rem;
     color: white;
     z-index: 5;
+    opacity: 1;
+    transition: all .5s;
+    cursor: pointer;
 }
 
 .gallery__thumbnails {
