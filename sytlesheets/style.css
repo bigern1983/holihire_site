@@ -642,3 +642,7 @@ footer ul {
 .darken {
     filter: brightness(80%);
 }
+
+.text-highlight {
+    color: #e67235;
+}

@@ -29,8 +29,27 @@
     width: 100%;
     display: block;
     transition: all .3s;
+    position: relative;
+    margin-top: .5rem;
     
 }
+
+.booking__group--privacy input[type=checkbox] {
+    width: auto;
+    display: inline;
+}
+.booking__group--privacy label {
+    display: inline;
+}
+
+.booking__group--privacy {
+    margin-top: 1rem;
+    padding: 2rem 0;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+
 
 .booking__input:focus {
     background-color: rgba(0,0,0,.2);
@@ -143,7 +162,9 @@
 .pristine-error {
     font-size: .8rem;
     color: red;
-    float: right;
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
     margin-right: 10%;
 }
 
