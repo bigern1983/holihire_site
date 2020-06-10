@@ -24,7 +24,6 @@ window.onload = function () {
         // check if the form is valid
         console.log("submit")
         var valid = pristine.validate(); // returns true or false
-        console.log(valid)
         if (!valid) {
             e.preventDefault();
         }

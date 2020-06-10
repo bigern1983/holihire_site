@@ -1,9 +1,16 @@
 .booking__form {
-    margin: 5rem auto;
+    width: 60%;
+    margin: 0 auto;
     background-color: white;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
     padding: 1rem;
     border-radius: .3rem;
+}
+
+@media (max-width: 576px) {
+    .booking__form {
+        width: 90%;
+    }
 }
 .booking__group {
     position: relative;
