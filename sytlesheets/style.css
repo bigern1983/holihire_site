@@ -167,7 +167,7 @@ footer {
 }
 
 .card:hover {
-  
+
     box-shadow: 0.8rem 0.8rem 1.8rem  0 rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
     
@@ -216,7 +216,7 @@ footer {
 }
 
 .card--2 {
-    background-image: url("../imgs/pram3-green.jpg")
+    background-image: url("../imgs/pushchair-1-green.jpg")
 }
 
 .card--2 .card__title {
