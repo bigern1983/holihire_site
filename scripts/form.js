@@ -13,20 +13,42 @@ var defaultConfig = {
 
 window.onload = function () {
 
-    var form = document.getElementById("booking-form");
+    var bookingForm = document.getElementById("booking-form");
 
     // create the pristine instance
-    var pristine = new Pristine(form, defaultConfig);
+    if (bookingForm) {
+        var pristineBooking = new Pristine(bookingForm, defaultConfig, true);
 
-    form.addEventListener('submit', function (e) {
- 
+        bookingForm.addEventListener('submit', function (e) {
 
-        // check if the form is valid
-        console.log("submit")
-        var valid = pristine.validate(); // returns true or false
-        if (!valid) {
-            e.preventDefault();
-        }
 
-    });
+            // check if the form is valid
+            console.log("submit")
+            var valid = pristineBooking.validate(); // returns true or false
+            if (!valid) {
+                e.preventDefault();
+            }
+
+        });
+    }
+
+    var contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        var pristineContact = new Pristine(contactForm, defaultConfig, true);
+
+        contactForm.addEventListener('submit', function (e) {
+
+
+            // check if the form is valid
+            console.log("submit")
+            var valid = pristineContact.validate(); // returns true or false
+            if (!valid) {
+                e.preventDefault();
+            }
+
+        });
+
+    }
+
+
 };

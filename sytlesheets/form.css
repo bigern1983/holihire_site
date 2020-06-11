@@ -14,6 +14,7 @@
 }
 .booking__group {
     position: relative;
+    padding: 0.2rem;
 
 }
 
@@ -45,10 +46,10 @@
 .booking__group--privacy {
     margin-top: 1rem;
     padding: 2rem 0;
+    font-size: .8rem;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
-
 
 
 .booking__input:focus {
@@ -58,6 +59,7 @@
 .form-error > .booking__input {
     border-bottom: 3px solid red;
 }
+
 
 .form-success > .booking__input {
     border-bottom: 3px solid green;
@@ -104,6 +106,7 @@
     opacity: 1;
     transition: all .3s;
     position: relative;
+
 }
 
 .booking__input:placeholder-shown + .booking__label {
@@ -162,14 +165,13 @@
 .pristine-error {
     font-size: .8rem;
     color: red;
-    position: absolute;
-    top: -1.2rem;
-    left: 0;
+    display: block;
+ 
     margin-right: 10%;
 }
 
 .contact__form {
-    width: 30rem;
+    width:100%;
     margin: 5rem auto;
     background-color: white;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -178,9 +180,30 @@
 
 }
 
-@media (max-width: 32rem) {
+@media (max-width: 768px) {
     .contact__form {
-        width: 20rem;
+        margin: 1rem auto;
+    }
+}
+
+.contact__form h1 {
+    font-size: 2.5rem;
+    border-bottom: 0.2rem solid #36A0D4;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+
+.contact__form li a {
+    color: inherit;
+}
+
+.conact__form a:hover {
+    color:inherit;
+}
+/* @media (max-width: 32rem) {
+    .contact__form {
+        width: 90%;
     }
     
-}
+} */
