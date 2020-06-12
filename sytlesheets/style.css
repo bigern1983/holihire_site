@@ -281,8 +281,9 @@ h1 {
     font-size: 4rem;
     color: #e67235;
     text-transform: uppercase;
-  
-}
+    border-bottom: .2rem solid #36A0D4;
+
+};
 
 @media (max-width: 576px) {
     h1 {
