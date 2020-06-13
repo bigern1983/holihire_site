@@ -93,6 +93,7 @@ function Gallery(el) {
         var newImg = document.createElement("img");
         // newImg.setAttribute("data-test", "test");
         newImg.src = this.thumbs[i].src;
+        newImg.alt = this.thumbs[i].alt
         newImg.classList.add("gallery__image");
         newImg.addEventListener("click", function (ev) {
             console.log("click");
