@@ -42,23 +42,31 @@ footer {
 #mainHeading {
     height: 100vh;
     width: 100%!important;
-    font-size: 2rem;
-    font-weight: 300;
-    text-align: center;
+   
     background-image: linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.3)),
                         url("../imgs/scooter-9-wide.jpg");
     background-size: cover;
     background-position: 50%;
     color: white;
-    position: relative;
-    line-height: 1.2;
+    position: relative;}
+
+#mainHeading h2 {
+     font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
 }
     
 
 @media (max-width: 768px) {
     #mainHeading {
-        font-size: 1.2rem;
+        
         background-position: 70%;
+    }
+
+    #mainHeading h2 {
+        font-size: 1.3rem;
     }
 }
 
@@ -119,9 +127,9 @@ footer {
 .neu-button {
     background-color: #e67235;
     border: none;
-    border-radius: 1em;
+    border-radius: 3rem;
     outline: none;
-    padding: 0.4em 1.5em;
+    padding: 0.4rem 1.5rem;
     color: white;
     font-weight: 300;
     text-transform: uppercase;
@@ -130,6 +138,7 @@ footer {
     position: relative;
     top: -4px;
     transition: all .3s;
+    font-size: 1.5rem;
     
 }
 
