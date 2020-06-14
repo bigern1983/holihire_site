@@ -205,7 +205,7 @@ function Gallery(el) {
 
     this.popupHammer = new Hammer.Manager(this.popupMain);
     var swipe1 = new Hammer.Swipe();
-    this.popupHammer.add(swipe);
+    this.popupHammer.add(swipe1);
     this.popupHammer.on("swipeleft", this.popupNext.bind(this));
     this.popupHammer.on("swiperight", this.popupPrev.bind(this));
 
@@ -241,12 +241,7 @@ for (var i = 0; i < galleryList.length; ++i) {
     galleryArray.push(new Gallery(galleryList[i]));
 }
 
-// //configure popup
-// var popup = document.querySelector(".popup");
-// var popupClose = document.querySelector(".popup__close");
-// popupClose.addEventListener("click", function(ev){
-//     popup.classList.toggle("popup--hidden");
-// }.bind(this));
+
 
 resizeAll();
 window.onresize = resizeAll;
