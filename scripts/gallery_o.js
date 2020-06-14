@@ -141,6 +141,22 @@ function Gallery(el) {
         console.log("click")
         this.prevImage();
     }.bind(this));
+
+
+
+    this.hammer = new Hammer(this.main);
+    this.hammer.on("swipeleft", function (ev) {
+        console.log("swipe event");
+        this.nextImage();
+
+    }.bind(this));
+
+    this.hammer.on("swiperight", function (ev) {
+        console.log("swipe event");
+        this.prevImage();
+
+    }.bind(this));
+
 }
 
 
