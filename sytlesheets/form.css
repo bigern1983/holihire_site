@@ -1,7 +1,7 @@
 .booking__form {
     width: 60%;
     margin: 0 auto;
-    background-color: white;
+    background-color: #fafafa;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
     padding: 1rem;
     border-radius: .3rem;
@@ -173,7 +173,7 @@
 .contact__form {
     width:100%;
     margin: 1rem auto;
-    background-color: white;
+    background-color: #fafafa;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
     padding: 1rem;
     border-radius: .3rem;

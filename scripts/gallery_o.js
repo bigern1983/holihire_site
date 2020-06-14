@@ -24,8 +24,6 @@ function Gallery(el) {
     this.popupPrevArrow = this.popupEl.querySelector(".gallery__prev");
     document.body.appendChild(this.popupEl);
 
-   
-
 
     this.popupNext = function () {
         console.log("next pop")
@@ -121,8 +119,14 @@ function Gallery(el) {
 
     //center on the clicked thumbnail
     this.slideThumbs = function (n) {
-        if ((n < 2) || (n > (this.mainImages.length - 2 - 1))) {
-            return;
+        
+
+        if (n < 2) {
+            n = 2;
+        }
+
+        if (n >= this.mainImages.length - 2) {
+            n = this.mainImages.length - 3;
         }
         this.thumbsGalleryWidht = el.querySelector(".gallery__thumbnails").offsetWidth;
         var thumbWidth = this.thumbsGalleryWidht / 5;
@@ -137,20 +141,18 @@ function Gallery(el) {
     for (var i = 0; i < this.thumbs.length; ++i) {
         this.images.push(this.thumbs[i]);
         var newImg = document.createElement("img");
-        // newImg.setAttribute("data-test", "test");
         newImg.src = this.thumbs[i].src;
         newImg.alt = this.thumbs[i].alt
         newImg.classList.add("gallery__image");
         newImg.addEventListener("click", function (ev) {
-            console.log("click");
             this.popupIndex = this.currentImageIndex;
-            console.log(this.popupMain)
             this.popupMain.innerHTML = "";
             var popupImg = document.createElement("img");
             popupImg.src = ev.target.src;
             popupImg.classList.add("popup__image");
             this.popupMain.appendChild(popupImg);
             this.popupEl.classList.toggle("popup--hidden");
+            
             this.checkEnd();
         }.bind(this));
 
