@@ -1,12 +1,5 @@
-/* <div class="popup popup--hidden">
-    <i class="popup__close fas fa-window-close"></i>
-    <div class="popup__main">
-
-    </div>
-</div> */
 
 function Gallery(el) {
-    console.log(el)
     this.thumbs = el.querySelectorAll(".gallery__thumbnail-image");
     this.thumbItems = el.querySelectorAll(".gallery__thumbnail-item");
     this.main = el.querySelector(".gallery__main");
@@ -19,20 +12,13 @@ function Gallery(el) {
     this.nextArrow = this.main.querySelector(".gallery__next");
     this.prevArrow = this.main.querySelector(".gallery__prev");
 
-    //create popup
-    // this.popupEl = document.createElement("div");
-    // this.popupEl.classList.add("popup", "popup--hidden");
-    // this.popupClose = document.createElement("i");
-    // this.popupClose.classList.add("popup__close", "fas", "fa-window-close");
-    // this.popupMain = document.createElement("div");
-    // this.popupMain.classList.add("popup__main");
-
-    // this.popupEl.appendChild(this.popupClose);
-    // this.popupEl.appendChild(this.popupMain);
+    //create a popup element from a templated entry in the html 
     var popupTemplate = document.querySelector(".popup");
     this.popupEl = popupTemplate.cloneNode(true);
     this.popupMain = this.popupEl.querySelector(".popup__main");
     this.popupClose = this.popupEl.querySelector(".popup__close");
+    this.popupNextArrow = this.popupEl.querySelector(".gallery__next");
+    this.popupPrevArrow = this.popupEl.querySelector(".gallery__prev");
     document.body.appendChild(this.popupEl);
 
    
@@ -48,6 +34,7 @@ function Gallery(el) {
             this.popupMain.firstElementChild.className = "";
             this.popupMain.firstElementChild.classList.add("popup__image");
             this.popupIndex += 1;
+            this.checkEnd();
         }   
     }
 
@@ -61,6 +48,7 @@ function Gallery(el) {
             this.popupMain.firstElementChild.className = "";
             this.popupMain.firstElementChild.classList.add("popup__image");
             this.popupIndex -= 1;
+            this.checkEnd();
         }
     }
 
@@ -96,7 +84,6 @@ function Gallery(el) {
         } else {
             //put it back
             this.prevArrow.style.opacity = 1;
-
         }
 
         if (this.currentImageIndex == this.mainImages.length - 1) {
@@ -105,9 +92,19 @@ function Gallery(el) {
         } else {
             //put it back
             this.nextArrow.style.opacity = 1;
-
         }
 
+        if (this.popupIndex == this.mainImages.length - 1) {
+            this.popupNextArrow.style.opacity = 0;
+        } else {
+            this.popupNextArrow.style.opacity = 1;
+        }
+
+        if (this.popupIndex == 0) {
+            this.popupPrevArrow.style.opacity = 0;
+        } else {
+            this.popupPrevArrow.style.opacity = 1;
+        }
     }
 
     this.resizeThumbs = function () {
@@ -133,11 +130,6 @@ function Gallery(el) {
         }
     }
 
-
-
-
-
-
     //add all images to main panel
     for (var i = 0; i < this.thumbs.length; ++i) {
         this.images.push(this.thumbs[i]);
@@ -156,6 +148,7 @@ function Gallery(el) {
             popupImg.classList.add("popup__image");
             this.popupMain.appendChild(popupImg);
             this.popupEl.classList.toggle("popup--hidden");
+            this.checkEnd();
         }.bind(this));
 
         this.main.appendChild(newImg);
