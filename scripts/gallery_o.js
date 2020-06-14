@@ -1,5 +1,8 @@
 
+
 function Gallery(el) {
+
+
     this.thumbs = el.querySelectorAll(".gallery__thumbnail-image");
     this.thumbItems = el.querySelectorAll(".gallery__thumbnail-item");
     this.main = el.querySelector(".gallery__main");

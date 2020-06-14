@@ -45,7 +45,7 @@
     border: 0.3rem solid #91d3f5;
     border-radius: .4rem;
     opacity: 0;
-    filter: brightness(85%);
+    filter: brightness(90%);
     cursor: pointer;
 }
 
@@ -124,7 +124,7 @@
 }
 
 
-
+/* 
 .gallery__thumbnail-item::after {
      font-family: "Font Awesome 5 Free";
      font-weight: 900;
@@ -151,7 +151,7 @@
     opacity: 1;
     transform: scale(1);
 
-}
+} */
 
 
 
