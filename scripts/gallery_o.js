@@ -144,7 +144,10 @@ function Gallery(el) {
 
 
 
-    this.hammer = new Hammer(this.main);
+    this.hammer = new Hammer.Manager(this.main);
+    var swipe = new Hammer.Swipe();
+    this.hammer.add(swipe);
+
     this.hammer.on("swipeleft", function (ev) {
         console.log("swipe event");
         this.nextImage();
