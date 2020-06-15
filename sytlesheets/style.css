@@ -36,7 +36,6 @@ body {
     line-height: 150%;
     font-weight: 300;
     background-color: #f0f0f0;
-    margin-top: 4.6rem;
 }
 
 footer {
@@ -57,7 +56,6 @@ footer {
     background-position: 50%;
     color: white;
     position: relative;
-    margin-top: -3rem;
 }
 
 #mainHeading h2 {
@@ -97,7 +95,7 @@ footer {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 40%;
+    top: 50%;
     transform: translate(0, -50%)!important;
     text-align: center;
 }
@@ -118,6 +116,7 @@ footer {
   
     /* box-shadow: 1rem 1rem 3rem rgba(0,0,0,.3);; */
 }
+
 
 
 #mainNavbar {
@@ -326,12 +325,13 @@ h1 {
     color: #e67235;
     text-transform: uppercase;
     border-bottom: .2rem solid #36A0D4;
+    margin-bottom: 1rem;
 
-};
+}
 
 @media (max-width: 576px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 }
 
@@ -695,4 +695,8 @@ footer ul {
 
 .text-highlight {
     color: #e67235;
+}
+
+.u-margin-top__large {
+    margin-top: 4.6rem;
 }
