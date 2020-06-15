@@ -14,8 +14,9 @@
 
     <script src="https://kit.fontawesome.com/b5db990aa2.js" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet"
         type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="sytlesheets/style.css">
 
@@ -27,7 +28,7 @@
 <body>
     <header>
 
-        <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-lg py-0 fixed-top">
+        <nav id="mainNavbar" class="navbar navbar-expand-lg py-0 fixed-top">
             <a class="navbar-brand" href="index.html"><i class="fas fa-sun"></i> Holihire</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +64,7 @@
 
 
 
-        <div id="mainHeading" class="header__main skewed-section">
+        <div id="mainHeading" class="header__main">
             <div class="header__content">
                 <h1 class="sr-only">Holihire Rentals</h1>
                 <img class="header__image" src="imgs/banner.svg" width="66%" alt="Holihire logo">
@@ -84,7 +85,7 @@
 
                 <div class="row">
                     <div class="col-lg-4 d-flex justify-content-around my-3 my-lg-5">
-                        <div id="mobility" class="card text-center">
+                        <a href="mobility.html" id="mobility" class="card text-center">
                             <div class="card-header card--1 clip-bottom">
                                 <h3 class="card__title">
                                     mobility hire
@@ -99,12 +100,15 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <a class="neu-button" href="mobility.html">More Info</a>
+                                <!-- <a class="neu-button" href="mobility.html">More Info</a> -->
+                                <span class="mr-3">Learn More</span>
+                                <span>&rarr;</span>
+                                
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 d-flex justify-content-around my-3 my-lg-5">
-                        <div id="baby" class="card text-center">
+                        <a href="baby_hire.html" id="baby" class="card text-center">
                             <div class="card-header clip-bottom card--2">
                                 <h3 class="card__title">
                                     Baby Equipment
@@ -121,12 +125,15 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <a class="neu-button" href="baby_hire.html">More Info</a>
+                                <!-- <a class="neu-button" href="mobility.html">More Info</a> -->
+                                <span class="mr-3">Learn More</span>
+                                <span>&rarr;</span>
+                            
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 d-flex justify-content-around my-3 my-lg-5">
-                        <div id="general" class="card text-center">
+                        <a href="general.html" id="general" class="card text-center">
                             <div class="card-header card--3 clip-bottom">
                                 <h3 class="card__title">
                                     General Hire
@@ -142,9 +149,12 @@
                                 </ul>
                             </div>
                             <div class="card-footer">
-                                <a class="neu-button" href="mobility.html">More Info</a>
+                                <!-- <a class="neu-button" href="mobility.html">More Info</a> -->
+                                <span class="mr-3">Learn More</span>
+                                <span>&rarr;</span>
+                            
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
@@ -163,8 +173,8 @@
                         <polygon fill="white" points="0 0, 0 100,100 0, 0 0" />
                     </svg> -->
 
-                <div class="col-md-6">
-                    <h2>About Us</h2>
+                <div class="col-md-6 py-2">
+                    <h2>HOLIHIRE</h2>
                     <p>
                         Established in 2005, based in Protaras and also covering Ayia Napa and surrounding areas,
                         Holihire offers over 15 years of experience, customer service and knowledge in the
@@ -180,7 +190,7 @@
                     </p>
 
                 </div>
-                <div class="col-md-6 h-100">
+                <div class="col-md-6 d-flex align-items-center justify-content-around">
                     <div class="composition">
                         <img src="imgs/scooter-8.jpg" alt="One of our mobility scooters" class="composition__photo composition__photo--p1">
                         <img src="imgs/pushchair-2.jpg" alt="One of our strollers" class="composition__photo composition__photo--p2">
@@ -212,7 +222,7 @@
                         <li>Eastern Cyprus</li>
                     </ul>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer mt-3">
                     <a class="neu-button" href="bookings.html">Book Now</a>
                 </div>
             </section>

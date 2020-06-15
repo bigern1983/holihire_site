@@ -11,10 +11,8 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"
         type="text/css">
 
-    <script src="https://kit.fontawesome.com/b5db990aa2.js" crossorigin="anonymous"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet"
-        type="text/css">
+    <!-- <script src="https://kit.fontawesome.com/b5db990aa2.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="sytlesheets/style.css">
     <link rel="stylesheet" href="sytlesheets/form.css">
@@ -62,150 +60,168 @@
 
 
     </header>
-    <main>
-        <section class="booking__form my-5">
-            <form action="https://app.99inbound.com/api/e/LvaSWaJo" method="POST" target="_blank" id="booking-form">
+ 
+        <div class="container-fluid my-5">
+            <div class="row my-5">
+                <div class="col">
+                    <div class="booking__form">
+                        <form action="https://app.99inbound.com/api/e/LvaSWaJo" method="POST" target="_blank"
+                            id="booking-form">
 
-                <h1>Holihire</h1>
-                <h2>Booking Form</h2>
+                            <h1>Holihire</h1>
+                            <h2>Booking Form</h2>
 
-                <p>Please complete the form to reserve your items, no pre payment required. We will contact you as
-                    quickly as possible
-                    to
-                    finalise your booking.</p>
-                <p>All items are thoroughly cleaned prior to hiring.</p>
-                <p>Please note that the minimum booking period for all items is 3 days.</p>
+                            <p>Please complete the form to reserve your items, no pre payment required. We will contact
+                                you
+                                as
+                                quickly as possible
+                                to
+                                finalise your booking.</p>
+                            <p>All items are thoroughly cleaned prior to hiring.</p>
+                            <p>Please note that the minimum booking period for all items is 3 days.</p>
 
-                <h3 class="my-4">Your Details</h3>
-                <div class="booking__group">
-                    <input type="text" class="booking__input" name="name" id="name" placeholder="Full Name" required
-                        minlength="5">
-                    <label class="booking__label" for="name">Full name</label>
+                            <h3 class="my-4">Your Details</h3>
+                            <div class="booking__group">
+                                <input type="text" class="booking__input" name="name" id="name" placeholder="Full Name"
+                                    required minlength="5">
+                                <label class="booking__label" for="name">Full name</label>
+                            </div>
+                            <div class="booking__group">
+                                <input type="email" class="booking__input" name="email" id="email" placeholder="Email"
+                                    required minlength="5">
+                                <label class="booking__label" for="email">Email address</label>
+                            </div>
+                            <div class="booking__group">
+                                <input type="tel" class="booking__input" name="phone" id="telephone"
+                                    placeholder="Contact Number" required minlength="5">
+                                <label class="booking__label" for="telephone">Contact number</label>
+                            </div>
+
+
+
+                            <h3 class="my-4">What would you like to book?</h3>
+
+                            <div class="booking__group">
+                                <textarea class="booking__input" name="items-required" id="items" cols="30" rows="5"
+                                    minlength="1" placeholder="Items" required></textarea>
+                                <label class="booking__label" for="items">Items you would like to book</label>
+                            </div>
+
+                            <h3 class="my-4">Where are you staying?</h3>
+                            <div class="booking__group">
+
+                                <textarea class="booking__input" name="location" id="location" cols="30" rows="5"
+                                    placeholder="Address of you accomodation (if you don't know you can let us know later)"
+                                    optional></textarea>
+                                <label class="booking__label" for="location">Address of your accomodation</label>
+                            </div>
+
+
+                            <h3 class="my-4">Would you like us to deliver?</h3>
+
+                            <div class="booking__group radio__group">
+                                <input class="booking__radio-input" type="radio" name="delivery" id="delivery"
+                                    value="deliver" checked>
+                                <label class="booking__radio-label" for="delivery">
+                                    <span class="booking__radio-button"></span>
+                                    Delivery
+                                </label>
+                                <input class="booking__radio-input" type="radio" name="delivery" id="collect"
+                                    value="collection">
+                                <label class="booking__radio-label" for="collect">
+                                    <span class="booking__radio-button"></span>
+                                    Collection
+                                </label>
+                                <input class="booking__radio-input" type="radio" name="delivery" id="unsure"
+                                    value="unsure">
+                                <label class="booking__radio-label" for="unsure">
+                                    <span class="booking__radio-button"></span>
+                                    Don't know
+                                </label>
+
+                            </div>
+
+                            <h3 class="my-4">Dates of your stay</h3>
+
+                            <div class="booking__group">
+                                <input type="date" class="booking__input" name="start-date" id="start-date"
+                                    placeholder="First day required" required>
+                                <label class="booking__label" for="start-date">First day required</label>
+                            </div>
+
+                            <div class="booking__group">
+                                <input type="date" class="booking__input" name="end-date" id="end-date"
+                                    placeholder="Last day required" required>
+                                <label class="booking__label" for="end-date">Last day required</label>
+                            </div>
+
+                            <div class="booking__group booking__group--privacy">
+                                <p>This information is collected to facilitate your booking and enable us to contact you
+                                    regarding your booking.
+                                    Please have a look at our <a href="privacy.html" class="text-highlight">privacy
+                                        policy</a> for more
+                                    information.</p>
+                                <input type="checkbox" name="privacy_agreement" id="privacy" class="booking__input"
+                                    required>
+                                <label for="privacy">I agree to my details being collected for the above purpose
+                                    (required).</label>
+                            </div>
+
+                            <div class="d-none">
+                                <input type="checkbox" name="free_range_navy_blue_houndstooth_people" value="1"
+                                    tabindex="-1" autocomplete="no">
+                            </div>
+
+                            <button id="complete" class="neu-button d-inline-block mt-4">Submit</button>
+
+
+                        </form>
+                    </div>
                 </div>
-                <div class="booking__group">
-                    <input type="email" class="booking__input" name="email" id="email" placeholder="Email" required
-                        minlength="5">
-                    <label class="booking__label" for="email">Email address</label>
-                </div>
-                <div class="booking__group">
-                    <input type="tel" class="booking__input" name="phone" id="telephone" placeholder="Contact Number"
-                        required minlength="5">
-                    <label class="booking__label" for="telephone">Contact number</label>
-                </div>
-
-
-
-                <h3 class="my-4">What would you like to book?</h3>
-
-                <div class="booking__group">
-                    <textarea class="booking__input" name="items-required" id="items" cols="30" rows="5" minlength="1"
-                        placeholder="Items" required></textarea>
-                    <label class="booking__label" for="items">Items you would like to book</label>
-                </div>
-
-                <h3 class="my-4">Where are you staying?</h3>
-                <div class="booking__group">
-
-                    <textarea class="booking__input" name="location" id="location" cols="30" rows="5"
-                        placeholder="Address of you accomodation (if you don't know you can let us know later)"
-                        optional></textarea>
-                    <label class="booking__label" for="location">Address of your accomodation</label>
-                </div>
-
-
-                <h3 class="my-4">Would you like us to deliver?</h3>
-
-                <div class="booking__group radio__group">
-                    <input class="booking__radio-input" type="radio" name="delivery" id="delivery" value="deliver"
-                        checked>
-                    <label class="booking__radio-label" for="delivery">
-                        <span class="booking__radio-button"></span>
-                        Delivery
-                    </label>
-                    <input class="booking__radio-input" type="radio" name="delivery" id="collect" value="collection">
-                    <label class="booking__radio-label" for="collect">
-                        <span class="booking__radio-button"></span>
-                        Collection
-                    </label>
-                    <input class="booking__radio-input" type="radio" name="delivery" id="unsure" value="unsure">
-                    <label class="booking__radio-label" for="unsure">
-                        <span class="booking__radio-button"></span>
-                        Don't know
-                    </label>
-
-                </div>
-
-                <h3 class="my-4">Dates of your stay</h3>
-
-                <div class="booking__group">
-                    <input type="date" class="booking__input" name="start-date" id="start-date"
-                        placeholder="First day required" required>
-                    <label class="booking__label" for="start-date">First day required</label>
-                </div>
-
-                <div class="booking__group">
-                    <input type="date" class="booking__input" name="end-date" id="end-date"
-                        placeholder="Last day required" required>
-                    <label class="booking__label" for="end-date">Last day required</label>
-                </div>
-
-                <div class="booking__group booking__group--privacy">
-                    <p>This information is collected to facilitate your booking and enable us to contact you regarding your booking. Please have a look at our <a
-                            href="privacy.html" class="text-highlight">privacy policy</a> for more information.</p>
-                    <input type="checkbox" name="privacy_agreement" id="privacy" class="booking__input" required>
-                    <label for="privacy">I agree to my details being collected for the above purpose (required).</label>
-                </div>
-
-                <div class="d-none">
-                    <input type="checkbox" name="free_range_navy_blue_houndstooth_people" value="1" tabindex="-1" autocomplete="no">
-                </div>
-
-                <button id="complete" class="neu-button d-inline-block mt-4">Submit</button>
-
-                
-            </form>
-        </section>
-    </main>
-
-<footer id="footer">
-
-    <div class="container-fluid mx-0">
-
-        <div class="row footer bg-dark py-4">
-            <div class="col-md-4">
-                <h4>Holihire</h4>
-                <ul>
-                    <li>469/1 Cavo Greko Avenue</li>
-                    <li>Protaras</li>
-                    <li>Cyprus</li>
-                    <li class="mb-2">5296</li>
-                    <li>&copy; 2005 - <span id="copyright"></span> Holihire Rentals</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Contact</h4>
-                <ul>
-                    <li><i class="fas fa-phone mr-3"></i>+357 99076507</li>
-                    <li><a href="https://wa.me/35799076507"><i class="fab fa-whatsapp mr-3"></i>WhatsApp</a></li>
-                    <li><a href="mailto:holirhire@gmail.com"><i class="fas fa-envelope mr-3"></i>holihire@gmail.com</a>
-                    </li>
-                    <!-- <li><i class="fab fa-google mr-3"></i>Google</li> -->
-                    <li><a href="https://www.facebook.com/Holihire-Rentals-Cyprus-135648543158786/"><i
-                                class="fab fa-facebook-square mr-3"></i>Facebook</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4>Find us</h4>
-                <ul>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.920080107666!2d34.05660971424758!3d35.00870567416934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc40953b4c63b%3A0x11f6171927dc8c7!2sHolihire!5e0!3m2!1sen!2suk!4v1588086512383!5m2!1sen!2suk"
-                        width="80%" height="auto" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
-                </ul>
             </div>
         </div>
-    </div>
-</footer>
+    
+
+    <footer id="footer">
+
+        <div class="container-fluid mx-0">
+
+            <div class="row footer bg-dark py-4">
+                <div class="col-md-4">
+                    <h4>Holihire</h4>
+                    <ul>
+                        <li>469/1 Cavo Greko Avenue</li>
+                        <li>Protaras</li>
+                        <li>Cyprus</li>
+                        <li class="mb-2">5296</li>
+                        <li>&copy; 2005 - <span id="copyright"></span> Holihire Rentals</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone mr-3"></i>+357 99076507</li>
+                        <li><a href="https://wa.me/35799076507"><i class="fab fa-whatsapp mr-3"></i>WhatsApp</a></li>
+                        <li><a href="mailto:holirhire@gmail.com"><i
+                                    class="fas fa-envelope mr-3"></i>holihire@gmail.com</a>
+                        </li>
+                        <!-- <li><i class="fab fa-google mr-3"></i>Google</li> -->
+                        <li><a href="https://www.facebook.com/Holihire-Rentals-Cyprus-135648543158786/"><i
+                                    class="fab fa-facebook-square mr-3"></i>Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Find us</h4>
+                    <ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.920080107666!2d34.05660971424758!3d35.00870567416934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc40953b4c63b%3A0x11f6171927dc8c7!2sHolihire!5e0!3m2!1sen!2suk!4v1588086512383!5m2!1sen!2suk"
+                            width="80%" height="auto" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 

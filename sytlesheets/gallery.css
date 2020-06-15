@@ -7,7 +7,7 @@
     border-bottom-width: 2px;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(4deg);
-    border-radius: .4rem;
+    border-radius: .2rem;
     padding: .5rem;
     backface-visibility: hidden;
     position: relative;
@@ -42,7 +42,7 @@
     z-index: 1;
     object-fit: cover;
     transition: all .5s;
-    border: 0.3rem solid #91d3f5;
+    border: 0.1rem solid #91d3f5;
     border-radius: .4rem;
     opacity: 0;
     filter: brightness(90%);
@@ -91,7 +91,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    border-radius: .4rem;
+    border-radius: .2rem;
     position: absolute;
     bottom: 0.5rem;
     left: 2.5%;
@@ -115,9 +115,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top: .2rem solid #e67235;
-    border-bottom: .2rem solid #e67235;
-    border-right: .2rem solid #e67235;
+    border-top: .1rem solid #e67235;
+    border-bottom: .1rem solid #e67235;
+    border-right: .1rem solid #e67235;
 
     position: relative;
     
@@ -162,12 +162,12 @@
 .gallery__thumbnail-item:first-child  .gallery__thumbnail-image {
     border-bottom-left-radius: .4rem;
     border-top-left-radius: .4rem;
-    border-left: .2rem solid #e67235;
+    border-left: .1rem solid #e67235;
 }
 .gallery__thumbnail-item:last-child  .gallery__thumbnail-image {
     border-bottom-right-radius: .4rem;
     border-top-right-radius: .4rem;
-    border-right: .2rem solid #e67235;
+    border-right: .1rem solid #e67235;
 }
 
 .u-rotate {

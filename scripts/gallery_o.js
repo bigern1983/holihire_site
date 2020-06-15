@@ -144,6 +144,7 @@ function Gallery(el) {
         newImg.src = this.thumbs[i].src;
         newImg.alt = this.thumbs[i].alt
         newImg.classList.add("gallery__image");
+        
         newImg.addEventListener("click", function (ev) {
             this.popupIndex = this.currentImageIndex;
             this.popupMain.innerHTML = "";
@@ -152,7 +153,6 @@ function Gallery(el) {
             popupImg.classList.add("popup__image");
             this.popupMain.appendChild(popupImg);
             this.popupEl.classList.toggle("popup--hidden");
-            
             this.checkEnd();
         }.bind(this));
 
