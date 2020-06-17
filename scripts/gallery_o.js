@@ -142,7 +142,8 @@ function Gallery(el) {
         this.images.push(this.thumbs[i]);
         var newImg = document.createElement("img");
         newImg.src = this.thumbs[i].src;
-        newImg.alt = this.thumbs[i].alt
+        newImg.alt = this.thumbs[i].alt;
+        newImg.srcset = this.thumbs[i].srcset;
         newImg.classList.add("gallery__image");
         
         newImg.addEventListener("click", function (ev) {

@@ -65,7 +65,13 @@ footer {
     line-height: 1.3;
     color: white;
 }
-    
+
+#mainHeading h1 {
+    color: white;
+    border: none;
+    font-size: 9rem;
+    margin: 0;
+}
 
 @media (max-width: 768px) {
     #mainHeading {
